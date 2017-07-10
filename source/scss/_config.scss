@@ -1,0 +1,40 @@
+//SCSS Config File
+/*** Author: Mateusz Boroch (matt@onemanwebdev.com) ***/
+/*
+ * Inside this file should be all repeat- and reuse-able elements
+ */
+
+/* Fonts Types */
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu:400');
+$font-prim: 'Open Sans', sans-serif;
+$font-second: 'Ubuntu Sans', sans-serif;*/
+$font-alt: sans-serif;
+
+/* Font Sizes */
+$font-base: 10px;
+$font-xs: 1.2 * $font-base;
+$font-sm: 1.4 * $font-base;
+$font-md: 1.6 * $font-base;
+$font-lg: 1.8 * $font-base;
+$font-xl:   2 * $font-base;
+
+/* Colors */
+$black:           #000000;
+$gray-very-dark:  #1f1f1f;
+$gray-dark:       #3f3f3f;
+$gray-mod-dark:   #5f5f5f;
+$gray:            #7f7f7f;
+$gray-mod-light:  #9f9f9f;
+$gray-light:      #bfbfbf;
+$gray-very-light: #dfdfdf;
+$white:           #ffffff;
+
+/* Grid Config */
+$grid-columns: 24;
+$grid-breakpoints: (xs: 0, sm: 480px, md: 660px, lg: 1000px, xl: 1340px);
+
+/* Config for Padding, Margin, Border System */
+$offset-type: (padding: 'p', margin: 'm', border: 'b');
+$offset-dir: (top: 't', right: 'r', bottom: 'b', left: 'l');
+$offset-value: (1: 1px, 2: 2px, 5: 5px, 10: 10px);
+$offset-orto: (all: 'a', x: 'x', y: 'y');

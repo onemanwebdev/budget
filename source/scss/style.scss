@@ -1,0 +1,22 @@
+//SCSS Main Scss file
+/*** Author: Mateusz Boroch (matt@onemanwebdev.com) ***/
+/*
+ * This file load all main element and container(s) with components.
+ * It is important to load file in right order!
+ */
+
+// Config file
+@import 'config';
+
+// All files from './base' directory in order
+// (reset - base - grid - [offset] - )
+@import 'base/reset';
+@import 'base/base';
+@import 'base/grid';
+@import 'base/offsets';
+
+// Main custom style (from './custom')
+@import 'custom/style';
+@import 'loaders/loader';
+
+// Additional custom components (from './custom/components')

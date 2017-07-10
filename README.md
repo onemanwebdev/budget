@@ -1,2 +1,2 @@
-# budget
-HomeBudget ReactApp
+yarn install
+yarn start

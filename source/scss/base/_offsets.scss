@@ -1,0 +1,37 @@
+//SCSS Offset System
+/*** Author: Mateusz Boroch (matt@onemanwebdev.com) ***/
+/*
+ * Module for creating offset of 'border', 'margin' and 'padding' by class names in
+ * pattern .c{border/margin/padding}{all/x/y/top/right/bottom/left}{pixels}.
+ * Addidional module create 'border-color: inherit' attribute to separete neighboring elements
+ *
+ * Examples:
+ *     .cba5 {border: 5px; border-color: inherit;}
+ *     .cmx2 {margin-left: 2px; margin-right: 2px;}
+ *     .cpt10 {padding-top: 10px;}
+ */
+
+
+@each $type, $shorttype in $offset-type {
+	@each $value, $pixels in $offset-value {
+		@each $orto, $shortorto in $offset-orto {
+			@if ($orto == 'all') {.c#{$shorttype}#{$shortorto}#{$value} {#{$type}: $pixels;}}
+			@if ($orto == 'x') {.c#{$shorttype}#{$shortorto}#{$value} {#{$type}-left: $pixels; #{$type}-right: $pixels;}}
+			@if ($orto == 'y') {.c#{$shorttype}#{$shortorto}#{$value} {#{$type}-top: $pixels; #{$type}-bottom: $pixels;}}
+			@if ($type == 'border') {
+				[class^="c#{$shorttype}#{$shortorto}"] {#{$type}-color: inherit;}
+			}
+		}
+		@each $direction, $shortdir in $offset-dir {
+			.c#{$shorttype}#{$shortdir}#{$value} {#{$type}-#{$direction}: $pixels;}
+			@if ($type == 'border') {
+				[class^="c#{$shorttype}#{$shortdir}"] {#{$type}-color: inherit;}
+			}
+		}
+	}
+}
+
+//Addtional attr. adding 'border-color' to all elements
+* {
+    border-color: inherit;
+}

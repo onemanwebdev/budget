@@ -1,0 +1,30 @@
+/*
+ * File to create Your own style sheet
+ */
+
+body {
+    background-color: $gray-light;
+}
+
+select {
+    background-color: $white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.mainTable {
+    tr {
+        border-bottom: 1px solid $gray;
+        &:last-child {
+            border: none;
+        }
+        th {
+            padding: 5px 10px;
+        }
+        td {
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            background-color: $gray-very-light;
+        }
+    }
+}

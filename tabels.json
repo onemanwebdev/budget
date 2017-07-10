@@ -1,0 +1,32 @@
+"tableUI": {
+    "data_dokumentu": "data",
+    "firma": [
+        "nazwa",
+        "nip",
+        "adres",
+        "platnik_vat"
+    ],
+    "nr_dokumentu": "nr",
+    "termin_platnosci": "data",
+    "termin_zaplaty": "data",
+    "pozycje": [
+        "przedmiot",
+        "kwota_netto",
+        {
+            "vat_percent": [23, 8, 5, 0, "zw", "oo"]
+        },
+        "kwot_vat",
+        "kwota_brutto"
+    ],
+    "rodzaj": ["koszt", "przychod"],
+    "forma_dokumentu": ["papier", "elektro"],
+    "rodzaj_platnosci": [
+        "gotowka",
+        {
+            "przelew": ["bank"]
+        },
+        {
+            "karta": ["bank"]
+        }
+    ]
+}
