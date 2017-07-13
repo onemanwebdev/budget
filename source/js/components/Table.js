@@ -11,28 +11,18 @@ class Table extends React.Component {
                     <table className="mainTable">
                         <thead>
                             <tr>
-                                <th>{string.DOC_DATE}</th>
-                                <th>{string.CONTRIBUTOR}</th>
-                                <th>{string.DOC_NR}</th>
-                                <th>{string.ITEM_DESCRIPTION}</th>
-                                <th>{string.AMOUNT_NET}</th>
-                                <th>{string.VAT_PERCENT}</th>
-                                <th>{string.AMOUNT_VAT}</th>
-                                <th>{string.AMOUNT_GROSS}</th>
-                                <th>{string.DUE_DATE}</th>
-                                <th>{string.DATE_OF_PAYMANT}</th>
+                                <th>{string.DESC}</th>
+                                <th>{string.AMOUNT}</th>
+                                <th>{string.DATE_REF}</th>
                                 <th>{string.TYPE}</th>
-                                <th>{string.COMMENTS}</th>
-                                <th>{string.DOCUMENT_FORM}</th>
+                                <th>{string.AMOUNT_REAL}</th>
+                                <th>{string.DATE_REAL}</th>
+                                <th>{string.NOTICE}</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td colSpan="13">
-                                    {`You select: ${this.props.month} ${this.props.year}`}
-                                </td>
-                                <td>
-                                    {console.log(api)}
+                                <td colSpan="7">
                                 </td>
                             </tr>
                         </tbody>

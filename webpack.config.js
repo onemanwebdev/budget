@@ -2,6 +2,7 @@ var Path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var FontelloPlugin = require("fontello-webpack-plugin");
 
 module.exports = {
     entry: './source/js/index.js',
@@ -33,6 +34,10 @@ module.exports = {
                     'file-loader?name=[name].[ext]&outputPath=img/',
                     'image-webpack-loader'
                 ]
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/i,
+                use : 'file-loader'
             }
         ]
     },
@@ -51,6 +56,9 @@ module.exports = {
             },
             template: "./source/index.html"
         }),
-        new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin(['dist']),
+        new FontelloPlugin({
+            config: require("./fontello.config.json")
+        })
     ]
 }

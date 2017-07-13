@@ -5,6 +5,7 @@
         "babel-preset-es2015-native-modules": "^6.9.4",
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
+        "fontello-webpack-plugin": "^0.4.4",
         "lodash": "^4.17.4",
         "moment": "^2.18.1",
         "react": "^15.5.4",
