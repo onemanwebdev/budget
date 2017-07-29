@@ -1,10 +1,13 @@
 import React from 'react'
 /*import ContentTable from './ContentTable'*/
 import * as string from '../constants/strings';
-import axios from 'axios';
-/*import {api} from '../services/api';*/
+import { fetchData } from '../services/api';
 
 class Table extends React.Component {
+    getData() {
+        {fetchData().then(r => console.log(r))}
+    }
+
     render() {
         return(
             <div className="row">
@@ -24,13 +27,7 @@ class Table extends React.Component {
                         <tbody>
                             <tr>
                                 <td colSpan="7">
-                                    {axios.get('http://localhost/budget/backend/api.php?type=getCoop&id=1')
-                                      .then(function (response) {
-                                        console.log(response);
-                                      })
-                                      .catch(function (error) {
-                                        console.log(error);
-                                    })}
+                                    {this.getData()}
                                 </td>
                             </tr>
                         </tbody>

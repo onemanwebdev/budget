@@ -1,10 +1,14 @@
 /*
  * File to create Your own style sheet
  */
+table {
+    width: 100%;
+}
 
 tr {
     border-bottom: 1px solid $gray-very-light;
     transition: all 0.5s ease;
+
     &:hover {
         background-color: $gray-light;
         color: $white;

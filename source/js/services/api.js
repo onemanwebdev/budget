@@ -1,9 +1,5 @@
 import axios from 'axios';
 
-export const api = axios.get('budget_api/backend/user?ID=12345')
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+export const fetchData = () => {
+    return axios.get('http://localhost/budget/backend/api.php?type=getCoop&id=1')
+}
