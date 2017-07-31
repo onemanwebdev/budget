@@ -1,7 +1,7 @@
 import React from 'react';
 import { months } from '../constants/calendarTypes';
 
-class SearchBar extends React.Component {
+class SelectBar extends React.Component {
     constructor(props) {
         super(props);
 
@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
     days() {
         const days = [];
         for(let i = 1; i <= 28; i++) {
-            days.push(<option>{i}</option>);
+            days.push(<option key={i}>{i}</option>);
         }
         return days;
     }
@@ -54,4 +54,4 @@ class SearchBar extends React.Component {
     }
 }
 
-export default SearchBar
+export default SelectBar;
