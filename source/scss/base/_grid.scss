@@ -6,38 +6,38 @@
  */
 
 .container {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .row::after {
-	content: "";
-	clear: both;
-	display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Grid system - containers & columns */
 @each $size, $value in $grid-breakpoints {
-	@media all and (min-width: $value) {
-		@if ($size == 'xs') {
-			.container {width: 100%;}
-		} @else {
-			.container {width: $value;}
-		}
-		.col-0-#{$size} {display: none;}
-		@for $i from 1 through $grid-columns {
-			$elem: ($i/$grid-columns) * 100%;
-			.col-#{$i}-#{$size} {width: $elem;}
-		}
-	}
+    @media all and (min-width: $value) {
+        @if ($size == "xs") {
+            .container {width: 100%;}
+        } @else {
+            .container {width: $value;}
+        }
+        .col-0-#{$size} {display: none;}
+        @for $i from 1 through $grid-columns {
+            $elem: ($i/$grid-columns) * 100%;
+            .col-#{$i}-#{$size} {width: $elem;}
+        }
+    }
 }
 
 [class^="col-"] {
-	float: left;
+    float: left;
 }

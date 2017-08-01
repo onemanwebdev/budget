@@ -8,17 +8,17 @@
         "at-rule-name-case": "lower",
         "at-rule-name-space-after": "always-single-line",
         "at-rule-no-unknown": [true, {
-            ignoreAtRules: ["extend"]
+            ignoreAtRules: ["charset", "each", "else", "extend", "for", "if", "import", "keyframes", "media"]
         }],
         "at-rule-semicolon-newline-after": "always",
         "at-rule-semicolon-space-before": "never",
-        "at-rule-whitelist": ["charset", "else", "extend", "if", "import", "keyframes", "media"],
+        "at-rule-whitelist": ["charset", "each", "else", "extend", "for", "if", "import", "keyframes", "media"],
         "block-closing-brace-empty-line-before": "never",
         "block-closing-brace-newline-after": ["always", {
-            "ignoreAtRules": ["if", "else"]
+            ignoreAtRules: ["if", "else"]
         }],
         "block-closing-brace-space-before": "never-single-line",
-        "block-opening-brace-newline-after": "always",
+        "block-opening-brace-newline-after": "always-multi-line",
         "block-opening-brace-space-before": "always",
         "block-no-empty": true,
         "color-hex-case": "lower",
@@ -73,7 +73,7 @@
         "property-case": "lower",
         "rule-empty-line-before": ["always", {
             except: ["first-nested"],
-            ignore: ["after-comment"]
+            ignore: ["after-comment", "inside-block"]
         }],
         "selector-attribute-brackets-space-inside": "never",
         "selector-attribute-operator-space-after": "never",
@@ -81,7 +81,6 @@
         "selector-combinator-space-after": "always",
         "selector-combinator-space-before": "always",
         "selector-descendant-combinator-no-non-space": true,
-        "selector-list-comma-newline-after": "always-multi-line",
         "selector-list-comma-space-after": "always-single-line",
         "selector-list-comma-space-before": "never",
         "selector-max-empty-lines": 1,

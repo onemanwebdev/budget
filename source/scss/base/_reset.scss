@@ -4,43 +4,48 @@ small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, l
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
 menu, nav, option, output, ruby, section, select, summary, textarea, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	color: inherit;
-	outline: none;
-	vertical-align: baseline;
-	text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    color: inherit;
+    outline: none;
+    vertical-align: baseline;
+    text-decoration: none;
 }
 
 /* HTML5 display-role for old browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 
 a:hover, a:visited, a:active, a:focus {
-	text-decoration: none;
-	color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
-	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 button, input, option, textarea, select {
 	background-color: transparent;
 }
+
 * {
 	box-sizing: border-box;
 }

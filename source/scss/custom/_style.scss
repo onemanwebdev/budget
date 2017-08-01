@@ -18,3 +18,14 @@ tr {
 td, th {
     @extend .cpa10;
 }
+
+ul, li {
+    display: inline-block;
+}
+
+.footer {
+    @extend .cpa10;
+    background-color: $gray-very-dark;
+    color: $gray-very-light;
+    font-weight: 700;
+}

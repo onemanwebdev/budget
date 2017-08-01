@@ -1,10 +1,15 @@
+export const ADDRESS = 'adres';
 export const AMOUNT = 'kwota';
 export const AMOUNT_REAL = 'kwota realizcji';
 export const BUDGET = 'budżet';
+export const CITY = 'miasto';
 export const DATE_REAL = 'data realizacji';
 export const DATE_REF = 'data referencyjna';
 export const DESC = 'opis';
 export const KIND = 'rodzaj';
+export const NAME = 'nazwa';
 export const NOTICE = 'uwagi';
 export const SELECTED_PERIOD = 'wybrany okres';
 export const SETUP = 'ustawienia';
+export const SHORTNAME = 'krótka nazwa';
+export const ZIP = 'kod';

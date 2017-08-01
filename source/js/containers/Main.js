@@ -4,7 +4,7 @@ import MainTable from './MainTable';
 import ServicePage from './ServicePage';
 
 const Main = () => (
-    <main>
+    <main> 
         <Route exact path="/" component={MainTable} />
         <Route path="/setup" component={ServicePage} />
     </main>

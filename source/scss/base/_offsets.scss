@@ -13,22 +13,22 @@
 
 
 @each $type, $shorttype in $offset-type {
-	@each $value, $pixels in $offset-value {
-		@each $orto, $shortorto in $offset-orto {
-			@if ($orto == 'all') {.c#{$shorttype}#{$shortorto}#{$value} {#{$type}: $pixels;}}
-			@if ($orto == 'x') {.c#{$shorttype}#{$shortorto}#{$value} {#{$type}-left: $pixels; #{$type}-right: $pixels;}}
-			@if ($orto == 'y') {.c#{$shorttype}#{$shortorto}#{$value} {#{$type}-top: $pixels; #{$type}-bottom: $pixels;}}
-			@if ($type == 'border') {
-				[class^="c#{$shorttype}#{$shortorto}"] {#{$type}-color: inherit;}
-			}
-		}
-		@each $direction, $shortdir in $offset-dir {
-			.c#{$shorttype}#{$shortdir}#{$value} {#{$type}-#{$direction}: $pixels;}
-			@if ($type == 'border') {
-				[class^="c#{$shorttype}#{$shortdir}"] {#{$type}-color: inherit;}
-			}
-		}
-	}
+    @each $value, $pixels in $offset-value {
+        @each $orto, $shortorto in $offset-orto {
+            @if ($orto == 'all') {.c#{$shorttype}#{$shortorto}#{$value} {#{$type}: $pixels;}}
+            @if ($orto == 'x') {.c#{$shorttype}#{$shortorto}#{$value} {#{$type}-left: $pixels; #{$type}-right: $pixels;}}
+            @if ($orto == 'y') {.c#{$shorttype}#{$shortorto}#{$value} {#{$type}-top: $pixels; #{$type}-bottom: $pixels;}}
+            @if ($type == 'border') {
+                [class^='c#{$shorttype}#{$shortorto}'] {#{$type}-color: inherit;}
+            }
+        }
+        @each $direction, $shortdir in $offset-dir {
+            .c#{$shorttype}#{$shortdir}#{$value} {#{$type}-#{$direction}: $pixels;}
+            @if ($type == 'border') {
+                [class^='c#{$shorttype}#{$shortdir}'] {#{$type}-color: inherit;}
+            }
+        }
+    }
 }
 
 //Addtional attr. adding 'border-color' to all elements

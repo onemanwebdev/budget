@@ -36,7 +36,7 @@ class MainTable extends React.Component {
                     year={this.state.year}
                     month={this.state.month}
                 />
-            <BudgetTable />
+                <BudgetTable />
             </div>
         );
     }

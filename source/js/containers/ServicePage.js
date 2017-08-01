@@ -1,10 +1,11 @@
 import React from 'react';
+import Cooperators from './Cooperators'
 
 class ServicePage extends React.Component {
     render() {
         return(
-            <div>
-                {`Service Page`}
+            <div className="container">
+                <Cooperators />
             </div>
         )
     }
