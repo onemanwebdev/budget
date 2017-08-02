@@ -23,6 +23,10 @@ ul, li {
     display: inline-block;
 }
 
+.header {
+    font-weight: 700;
+}
+
 .footer {
     @extend .cpa10;
     background-color: $gray-very-dark;

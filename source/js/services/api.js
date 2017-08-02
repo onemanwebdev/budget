@@ -1,7 +1,14 @@
 import axios from 'axios';
+import { API_URL } from '../config';
 
-const fetchData = () => {
-    return axios.get('http://localhost/budget/backend/api.php?type=getCoop&id=1')
+const fetchData = (params) => {
+    return axios({
+        baseURL: API_URL,
+        method: 'GET',
+        params: {
+            type: 'getCoop'
+        }
+    })
 }
 
 export default fetchData();

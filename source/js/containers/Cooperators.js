@@ -13,12 +13,12 @@ class Cooperators extends React.Component {
 
     getData() {
         fetchData.then(response => {
-            return response.data;
+            this.setState({data: response.data});
         });
     }
 
-    ComponentDidMount() {
-        this.setState({data: 'new data'})
+    componentDidMount() {
+        this.getData();
     }
 
     render() {

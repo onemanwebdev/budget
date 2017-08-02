@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as string from '../constants/strings';
 
 const Header = () => (
-    <header>
+    <header className="header">
         <div className="container">
             <div className="row">
                 <ul className="col-24-xs cpa10">

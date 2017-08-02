@@ -14,9 +14,7 @@ const CoopTable = (props) => (
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td colSpan="99">{props.data}</td>
-            </tr>
+            {console.log(props.data)}//do uporządkowania formatowanie danych i można wyświetlać
         </tbody>
     </table>
 )
