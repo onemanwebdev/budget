@@ -36,5 +36,5 @@ $grid-breakpoints: (xs: 0, sm: 480px, md: 660px, lg: 1000px, xl: 1340px);
 /* Config for Padding, Margin, Border System */
 $offset-type: (padding: 'p', margin: 'm', border: 'b');
 $offset-dir: (top: 't', right: 'r', bottom: 'b', left: 'l');
-$offset-value: (1: 1px, 2: 2px, 5: 5px, 10: 10px);
+$offset-value: (1: 1px, 2: 2px, 5: 5px, 10: 10px, 15: 15px, 20: 20px);
 $offset-orto: (all: 'a', x: 'x', y: 'y');

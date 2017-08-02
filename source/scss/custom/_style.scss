@@ -6,8 +6,11 @@ table {
 }
 
 tr {
-    border-bottom: 1px solid $gray-very-light;
     transition: all 0.5s ease;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $gray-very-light;
+    }
 
     &:hover {
         background-color: $gray-light;
@@ -24,6 +27,7 @@ ul, li {
 }
 
 .header {
+    background-color: $gray-very-light;
     font-weight: 700;
 }
 
@@ -32,4 +36,18 @@ ul, li {
     background-color: $gray-very-dark;
     color: $gray-very-light;
     font-weight: 700;
+    text-align: center;
+}
+
+.TESTsubmenu {
+    @extend .cpa10;
+    background-color: $gray-light;
+    color: $gray-mod-dark;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+}
+
+.TESTsubmenu > ul > li:hover {
+    color: $white;
 }
