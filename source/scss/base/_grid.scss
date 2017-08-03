@@ -6,7 +6,9 @@
  */
 
 .container {
-    width: 100%;
+    &, &__full {
+        width: 100%;
+    }
     margin-left: auto;
     margin-right: auto;
 }
@@ -38,6 +40,7 @@ img {
     }
 }
 
+/* Floating left all 'col-' */
 [class^='col-'] {
     float: left;
 }
