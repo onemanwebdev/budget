@@ -9,11 +9,11 @@ tr {
     transition: all 0.5s ease;
 
     &:not(:last-child) {
-        border-bottom: 1px solid $gray-30;
+        border-bottom: 1px solid $gray-10;
     }
 
     &:hover {
-        background-color: $gray-20;
+        background-color: $gray-30;
         color: $white;
     }
 }
@@ -27,22 +27,22 @@ ul, li {
 }
 
 .header {
-    background-color: $gray-50;
+    background-color: $gray-10;
     font-weight: 700;
 }
 
 .footer {
     @extend .cpa10;
     background-color: $gray-90;
-    color: $gray-10;
+    color: $gray-20;
     font-weight: 700;
     text-align: center;
 }
 
 .TESTsubmenu {
     @extend .cpa10;
-    background-color: $gray-30;
-    color: $gray-80;
+    background-color: $gray-40;
+    color: $gray-70;
     font-weight: 700;
     text-transform: capitalize;
     transition: all 0.5s ease;
