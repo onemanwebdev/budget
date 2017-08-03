@@ -19,15 +19,8 @@ $font-lg: 1.8 * $font-base;
 $font-xl:   2 * $font-base;
 
 /* Colors */
-$black:           #000000;
-$gray-very-dark:  #1f1f1f;
-$gray-dark:       #3f3f3f;
-$gray-mod-dark:   #5f5f5f;
-$gray:            #7f7f7f;
-$gray-mod-light:  #9f9f9f;
-$gray-light:      #bfbfbf;
-$gray-very-light: #dfdfdf;
-$white:           #ffffff;
+@import 'base/colors';
+//import custom colors goes here
 
 /* Grid Config */
 $grid-columns: 24;
