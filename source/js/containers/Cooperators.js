@@ -1,7 +1,8 @@
 import React from 'react';
-import fetchData from '../services/api';
+import api from '../services/api';
 import objToArr from '../services/objToArr';
 import CoopTable from '../components/CoopTable';
+import AddRow from '../components/AddRow';
 
 class Cooperators extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class Cooperators extends React.Component {
     }
 
     getData() {
-        fetchData.then(response => {
+        api.get({type: 'getCoop'}).then(response => {
             this.setState({data: response.data});
         });
     }
@@ -32,6 +33,10 @@ class Cooperators extends React.Component {
             <div>
                 <CoopTable
                     data={this.convertData(this.state.data)}
+                    displayRows={["coopID", "name", "shortName", "zip", "city", "address"]}
+                />
+                <AddRow
+                    title={`dodaj dostawcę`}
                     displayRows={["coopID", "name", "shortName", "zip", "city", "address"]}
                 />
             </div>

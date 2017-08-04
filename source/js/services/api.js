@@ -1,14 +1,32 @@
 import axios from 'axios';
 import { API_URL } from '../config';
 
-const fetchData = (params) => {
-    return axios({
-        baseURL: API_URL,
-        method: 'GET',
-        params: {
-            type: 'getCoop'
+let api = null;
+
+class Api {
+    constructor() {
+        this.config = {
+            baseURL: API_URL
         }
-    })
+    }
+
+    get(params) {
+        return axios({
+            baseURL: this.config.baseURL,
+            method: 'GET',
+            params
+        })
+    }
+
+    post(params, data) {
+        return axios({
+            baseURL: this.config.baseURL,
+            method: 'POST',
+            params,
+            data
+        })
+    }
 }
 
-export default fetchData();
+api = new Api();
+export default api;

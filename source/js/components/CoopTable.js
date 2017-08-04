@@ -3,7 +3,6 @@ import firstToUpper from '../services/firstToUpper'
 import * as string from '../constants/strings';
 
 const CoopTable = ({data, displayRows}) => {
-
     return (
         <table className="cmy10">
             <thead>
@@ -17,12 +16,12 @@ const CoopTable = ({data, displayRows}) => {
                 </tr>
             </thead>
             <tbody>
-                {data.map(rows => {
+                {data.map((rows, index) => {
                     return (
-                        <tr>
-                            {displayRows.map(row => {
+                        <tr key={index}>
+                            {displayRows.map((row, index) => {
                                 return(
-                                    <td>
+                                    <td key={index}>
                                         {rows[row]}
                                     </td>
                                 )}
