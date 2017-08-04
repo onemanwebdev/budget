@@ -8,11 +8,11 @@ const CoopTable = ({data, displayRows}) => {
             <thead>
                 <tr>
                     <th>{`ID`}</th>
-                    <th>{firstToUpper(string.NAME)}</th>
-                    <th>{firstToUpper(string.SHORTNAME)}</th>
-                    <th>{firstToUpper(string.ZIP)}</th>
-                    <th>{firstToUpper(string.CITY)}</th>
-                    <th>{firstToUpper(string.ADDRESS)}</th>
+                    <th>{string.NAME}</th>
+                    <th>{string.SHORTNAME}</th>
+                    <th>{string.ZIP}</th>
+                    <th>{string.CITY}</th>
+                    <th>{string.ADDRESS}</th>
                 </tr>
             </thead>
             <tbody>

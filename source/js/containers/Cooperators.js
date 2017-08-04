@@ -36,7 +36,8 @@ class Cooperators extends React.Component {
                     displayRows={["coopID", "name", "shortName", "zip", "city", "address"]}
                 />
                 <AddRow
-                    title={`dodaj dostawcę`}
+                    title={`nowy dostawca`}
+                    buttonLabel={`dodaj dostawcę`}
                     displayRows={["coopID", "name", "shortName", "zip", "city", "address"]}
                 />
             </div>

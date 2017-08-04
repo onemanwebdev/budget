@@ -88,6 +88,10 @@ td, th {
     @extend .cpa10;
 }
 
+th {
+    text-transform: capitalize; //do usunięcia
+}
+
 ul, li {
     display: inline-block;
 }
