@@ -8,8 +8,17 @@ class Queries {
         }
 
         /* GET COOPERATOR DATA */
-        public static function get_all_coop_query() {
+        public static function get_all_coop_query( $params = null ) {
+            $prefix = "oco_";
             $query = "SELECT * FROM obj_coop ORDER BY oco_id";
+            if ( is_array( $params ) && count( $params ) != 0 ) {
+                foreach ( $params as $key => $value ) {
+                    isset( $iterator ) ? $iterator++ : $iterator = 1;
+                    isset( $string ) ? $string .= "$prefix" . "$key = $value" : $string = "$prefix" . "$key = $value";
+                    ( $iterator != count( $params )) ? $string .= " AND " : null;
+                }
+                $query .= " WHERE " . $string;
+            }
             return $query;
         }
 

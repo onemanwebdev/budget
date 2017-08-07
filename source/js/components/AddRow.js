@@ -1,4 +1,5 @@
 import React from 'react'
+import api from '../services/api'
 
 class AddRow extends React.Component {
     constructor(props) {
@@ -13,13 +14,20 @@ class AddRow extends React.Component {
     }
 
     updateState = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
+        this.setState({[e.target.name]: e.target.value})
+    }
+
+    setData() {
+        api.post({
+            name: "Mateusz",
+            surname: "Boroch"
+        }).then(response => console.log(response))
+        .catch(err => console.log(err))
     }
 
     handleClick(e) {
         e.preventDefault();
+        if(e.target.name === "send") this.setData();
         this.setState(prevState =>({
             isAddButtonClicked: !prevState.isAddButtonClicked
         }));
@@ -45,7 +53,7 @@ class AddRow extends React.Component {
                                         </td>
                                     )
                                 })}
-                                <td><button className="button button__submit" onClick={this.handleClick}>{this.props.buttonLabel}</button></td>
+                                <td><button className="button button__submit" name="send" onClick={this.handleClick}>{this.props.buttonLabel}</button></td>
                             </tr>
                         </tbody>
                     </table>

@@ -14,7 +14,7 @@ class Cooperators extends React.Component {
     }
 
     getData() {
-        api.get({type: 'getCoop'}).then(response => {
+        api.get('cooperators', null).then(response => {
             this.setState({data: response.data});
         });
     }

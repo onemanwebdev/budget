@@ -10,19 +10,22 @@ class Api {
         }
     }
 
-    get(params) {
+    get(url, params) {
         return axios({
             baseURL: this.config.baseURL,
             method: 'GET',
+            url,
             params
         })
     }
 
-    post(params, data) {
+    post(data) {
         return axios({
             baseURL: this.config.baseURL,
             method: 'POST',
-            params,
+            headers: {
+                "Access-Control-Allow-Origin": "*"
+            },
             data
         })
     }
