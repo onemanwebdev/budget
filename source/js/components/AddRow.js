@@ -8,13 +8,7 @@ class AddRow extends React.Component {
         this.state = {
             isAddButtonClicked: false,
             isDataSend: false,
-            cooperators: {
-                name: null,
-                shortName: null,
-                city: null,
-                zip: null,
-                address: null
-            }
+            cooperators: {}
         }
     }
 
