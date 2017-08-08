@@ -18,7 +18,7 @@ class AddRow extends React.Component {
     }
 
     setData() {
-        api.post({
+        api.post('cooperators' ,{
             name: "Mateusz",
             surname: "Boroch"
         }).then(response => console.log(response))

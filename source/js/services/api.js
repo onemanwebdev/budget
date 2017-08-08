@@ -19,13 +19,11 @@ class Api {
         })
     }
 
-    post(data) {
+    post(url, data) {
         return axios({
             baseURL: this.config.baseURL,
             method: 'POST',
-            headers: {
-                "Access-Control-Allow-Origin": "*"
-            },
+            url,
             data
         })
     }

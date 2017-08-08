@@ -5,7 +5,7 @@
     ***/
 
     abstract class Core {
-        /* HTTP methods: GET, POST, PUT, DELETE */
+        /* HTTP methods: GET, POST, PUT, DELETE, OPTIONS */
         protected $method = "";
         /* Endpoint */
         protected $endpoint = "";
@@ -19,9 +19,11 @@
         /* Constructor */
         protected function __construct( $request ) {
             // Headers
-            header( "Access-Control-Allow-Origin: *" );
-            header( "Access-Control-Allow-Methods: *" );
-            header( "Content-Type: application/json" );
+            header( 'Access-Control-Allow-Origin: http://localhost:8080' );
+            header( 'Access-Control-Allow-Headers: access-control-allow-origin, content-type' );
+            //header( 'Access-Control-Allow-Methods: *' );
+            //header( 'Content-Type: application/json' );
+            //header( 'Origin: http://localhost:8080' );
 
             // Set endpoint & args
             $this->args = explode( '/', rtrim( $request ));
@@ -58,7 +60,7 @@
                 return $this->response( "No endpoint: $this->endpoint", 404 );
             }
             // Check if method is allowed for endpoint
-            if ( !$this->allowedMethod( $this->endpoint, $this->method )) {
+            if ( !$this->allowedMethod( $this->endpoint, $this->method ) && $this->method != "OPTIONS" ) {
                 return $this->response( "Method $this->method is not allowed for $this->endpoint endpoint", 405 );
             }
             return $this->response( $this->{$this->endpoint}() ); //return response method after calling endpoint method

@@ -28,7 +28,7 @@
 
         /* Check if requested method is allowed for this endpoint */
         protected function allowedMethod( $endpoint, $method ) {
-            switch( $endpoint ) {
+            switch ( $endpoint ) {
                 case 'base':        return in_array( $method, ['GET', 'POST'] );                   break;
                 case 'cooperators': return in_array( $method, ['GET', 'POST', 'PUT'] );            break;
                 case 'maintable':   return in_array( $method, ['GET', 'POST', 'PUT', 'DELETE'] );  break;
