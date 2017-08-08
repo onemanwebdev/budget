@@ -7,25 +7,45 @@ class AddRow extends React.Component {
 
         this.state = {
             isAddButtonClicked: false,
-            name: null
+            isDataSend: false,
+            cooperators: {
+                name: null,
+                shortName: null,
+                city: null,
+                zip: null,
+                address: null
+            }
         }
-
-        this.handleClick = this.handleClick.bind(this)
     }
 
-    updateState = (e) => {
-        this.setState({[e.target.name]: e.target.value})
+    updateState = e => {
+        this.setState({cooperators: {...this.state.cooperators, [e.target.name]: e.target.value}})
     }
 
-    setData() {
-        api.post('cooperators' ,{
-            name: "Mateusz",
-            surname: "Boroch"
-        }).then(response => console.log(response))
-        .catch(err => console.log(err))
+    setData = () => {
+        api.post({
+            url: 'cooperators',
+            data: this.state.cooperators
+        }).then(response => {
+            response.status === 200
+            ?
+            this.setState(prevState =>({
+                isAddButtonClicked: !prevState.isAddButtonClicked,
+                isDataSend: !prevState.isDataSend
+            }))
+            :
+            null
+        }).then(
+            setTimeout(() => {
+                this.setState(prevState => ({
+                    isDataSend: !prevState.isDataSend
+                }))
+            },1500
+            )
+        )
     }
 
-    handleClick(e) {
+    handleClick = e => {
         e.preventDefault();
         if(e.target.name === "send") this.setData();
         this.setState(prevState =>({
@@ -53,13 +73,16 @@ class AddRow extends React.Component {
                                         </td>
                                     )
                                 })}
-                                <td><button className="button button__submit" name="send" onClick={this.handleClick}>{this.props.buttonLabel}</button></td>
+                                <td><button className="button button__submit" name="send" onClick={this.setData}>{this.props.buttonLabel}</button></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             :
-                <button className="button button__add" onClick={this.handleClick}>Dodaj</button>
+                this.state.isDataSend ?
+                    <div><p>Dane zostały wysłane</p></div>
+                :
+                    <button className="button button__add" onClick={this.handleClick}>Dodaj</button>
         )
     }
 }

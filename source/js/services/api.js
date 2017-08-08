@@ -19,12 +19,11 @@ class Api {
         })
     }
 
-    post(url, data) {
+    post(props) {
         return axios({
             baseURL: this.config.baseURL,
             method: 'POST',
-            url,
-            data
+            ...props
         })
     }
 }

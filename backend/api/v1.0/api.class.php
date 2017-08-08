@@ -42,8 +42,8 @@
         /* ENDPOINTS */
         protected function cooperators() {
             switch( $this->method ) {
-                case 'GET':
-                    return $this->data->getData( 'getCooperators', $this->request );
+                case 'GET': return $this->data->getData( 'getCooperators', $this->request ); break;
+                case 'POST': 
             }
         }
     }
