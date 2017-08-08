@@ -45,17 +45,13 @@
                     $this->request = $this->cleanInput( $_POST ); break;
                     $this->input = file_get_contents( 'php://input' ); break;
                 case 'GET':
-                    $this->request = $this->cleanInput( $_GET ); break;
+                    @$this->request = array_shift( $this->cleanInput( $_GET )); break;
                 default:
-                    $this->response('Invalid Method', 405); break;
+                    $this->response( 'Invalid Method', 405 ); break;
             }
-
-            print_r ($this->request);
         }
 
-
-
-        /* Main open method returning response*/
+        /* Main open method which return response */
         public function processAPI() {
             // Check if given endpoint exist
             if ( !method_exists( $this, $this->endpoint )) {

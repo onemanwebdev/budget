@@ -42,7 +42,6 @@
             $this->connect();
             switch ( $task ) {
                 case 'getCooperators':
-                    echo Queries::get_all_coop_query( $params );
                     $this->result = $this->connect->query( Queries::get_all_coop_query( $params ));
                     $this->rows_num = $this->result->num_rows;
                     break;

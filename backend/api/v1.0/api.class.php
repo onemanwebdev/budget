@@ -30,7 +30,7 @@
         protected function allowedMethod( $endpoint, $method ) {
             switch( $endpoint ) {
                 case 'base':        return in_array( $method, ['GET', 'POST'] );                   break;
-                case 'cooperators':  return in_array( $method, ['GET', 'POST', 'PUT'] );            break;
+                case 'cooperators': return in_array( $method, ['GET', 'POST', 'PUT'] );            break;
                 case 'maintable':   return in_array( $method, ['GET', 'POST', 'PUT', 'DELETE'] );  break;
                 case 'payment':     return in_array( $method, ['POST', 'PUT', 'DELETE'] );         break;
                 case 'paytype':     return in_array( $method, ['GET', 'POST', 'PUT'] );            break;
