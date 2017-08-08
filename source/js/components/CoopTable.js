@@ -3,26 +3,25 @@ import firstToUpper from '../services/firstToUpper'
 import * as string from '../constants/strings';
 
 const CoopTable = ({data, displayRows}) => {
-
     return (
         <table className="cmy10">
             <thead>
                 <tr>
                     <th>{`ID`}</th>
-                    <th>{firstToUpper(string.NAME)}</th>
-                    <th>{firstToUpper(string.SHORTNAME)}</th>
-                    <th>{firstToUpper(string.ZIP)}</th>
-                    <th>{firstToUpper(string.CITY)}</th>
-                    <th>{firstToUpper(string.ADDRESS)}</th>
+                    <th>{string.NAME}</th>
+                    <th>{string.SHORTNAME}</th>
+                    <th>{string.ZIP}</th>
+                    <th>{string.CITY}</th>
+                    <th>{string.ADDRESS}</th>
                 </tr>
             </thead>
             <tbody>
-                {data.map(rows => {
+                {data.map((rows, index) => {
                     return (
-                        <tr>
-                            {displayRows.map(row => {
+                        <tr key={index}>
+                            {displayRows.map((row, index) => {
                                 return(
-                                    <td>
+                                    <td key={index}>
                                         {rows[row]}
                                     </td>
                                 )}

@@ -1,25 +1,95 @@
 /*
  * File to create Your own style sheet
  */
+.button {
+    @extend .cpy10;
+    @extend .cpx20;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    &__add {
+        background-color: $light-green-50;
+        color: $white;
+        transition: all 0.35s ease;
+
+        &:hover {
+            background-color: $light-green-70;
+        }
+
+        &:active {
+            background-color: $light-green-10;
+            color: $gray-30;
+        }
+    }
+
+    &__submit {
+        background-color: $lime-50;
+        color: $white;
+        min-width: 1px;
+        margin: auto;
+        transition: all 0.35s ease;
+
+        &:hover {
+            background-color: $lime-70;
+        }
+
+        &:active {
+            background-color: $lime-10;
+            color: $gray-30;
+        }
+    }
+}
+
+.table-row {
+    &__add-container {
+        padding: 5px;
+        input {
+            padding: 2px;
+            border-bottom: 1px solid $light-blue-70;
+            &::placeholder {
+                color: $gray-30;
+            }
+        }
+    }
+}
+
 table {
     width: 100%;
 }
 
-tr {
-    transition: all 0.5s ease;
+thead {
+    border-bottom: 2px solid $gray-40;
+}
 
-    &:not(:last-child) {
-        border-bottom: 1px solid $gray-30;
-    }
+tbody {
+    tr {
+        color: $gray-80;
 
-    &:hover {
-        background-color: $gray-20;
-        color: $white;
+        &:last-child {
+            text-align: center;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $gray-30;
+            transition: all 0.35s ease;
+        }
+
+        &:hover:not(:last-child) {
+            background-color: $gray-20;
+            color: $white;
+        }
     }
 }
 
+
 td, th {
     @extend .cpa10;
+}
+
+th {
+    text-transform: capitalize; //do usunięcia
 }
 
 ul, li {
