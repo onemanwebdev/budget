@@ -22,12 +22,12 @@ class AddRow extends React.Component {
             data: this.state.cooperators
         }).then(response => {
             response.status === 200
-            ?
+        ?
             this.setState(prevState =>({
                 isAddButtonClicked: !prevState.isAddButtonClicked,
                 isDataSend: !prevState.isDataSend
             }))
-            :
+        :
             null
         }).then(
             setTimeout(() => {
