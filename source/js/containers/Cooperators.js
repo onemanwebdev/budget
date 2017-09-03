@@ -2,11 +2,11 @@ import React from 'react';
 import api from '../services/api';
 import objToArr from '../services/objToArr';
 import CoopTable from '../components/CoopTable';
-import AddRow from '../components/AddRow';
+import AddRow from '../containers/AddRow';
 
 class Cooperators extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
 
         this.state = {
             data: null
@@ -15,7 +15,7 @@ class Cooperators extends React.Component {
 
     getData() {
         api.get('cooperators', null).then(response => {
-            this.setState({data: response.data});
+            this.setState({data: response.data})
         });
     }
 
@@ -25,7 +25,7 @@ class Cooperators extends React.Component {
     }
 
     componentDidMount() {
-        this.getData();
+        this.getData()
     }
 
     render() {
@@ -45,4 +45,4 @@ class Cooperators extends React.Component {
     }
 }
 
-export default Cooperators;
+export default Cooperators

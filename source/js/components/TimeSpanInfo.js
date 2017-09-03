@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 import * as string from '../constants/strings';
 
-class TimeSpanInfo extends React.Component {
-    render() {
-        return (
+const TimeSpanInfo = (props) => {
+    return (
+        <div className="row">
             <div className="col-16-xs">
-                {`${string.SELECTED_PERIOD}: ${this.props.month} ${this.props.year}`}
+                <p>{`${string.SELECTED_PERIOD}: ${props.month} ${props.year}`}</p>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
-export default TimeSpanInfo;
+export default TimeSpanInfo

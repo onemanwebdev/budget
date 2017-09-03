@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ContentTable = () => {
     return(
@@ -14,4 +14,4 @@ const ContentTable = () => {
     )
 }
 
-export default ContentTable;
+export default ContentTable

@@ -1,28 +1,28 @@
 import React from 'react';
-import { months } from '../constants/calendarTypes';
+import { MONTHS } from '../constants/calendarTypes';
 
 class SelectBar extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
 
-        this.monthArray = Object.values(months);
+        this.monthArray = Object.values(MONTHS)
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this)
     }
 
     handleChange(e) {
         this.setState({
             [e.target.className]: e.target.value
-        });
-        this.props.stateUpdate(e.target.className, e.target.value);
+        })
+        this.props.stateUpdate(e.target.className, e.target.value)
     }
 
     days() {
         const days = [];
         for(let i = 1; i <= 28; i++) {
-            days.push(<option key={i}>{i}</option>);
+            days.push(<option key={i}>{i}</option>)
         }
-        return days;
+        return days
     }
 
     render() {
@@ -54,4 +54,4 @@ class SelectBar extends React.Component {
     }
 }
 
-export default SelectBar;
+export default SelectBar

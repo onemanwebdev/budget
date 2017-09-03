@@ -1,4 +1,4 @@
-export const months = {
+export const MONTHS = {
     1:  {zeroNumber: '01', plName: 'styczeń'},
     2:  {zeroNumber: '02', plName: 'luty'},
     3:  {zeroNumber: '03', plName: 'marzec'},

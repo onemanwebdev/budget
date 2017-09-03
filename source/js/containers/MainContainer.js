@@ -1,26 +1,26 @@
 import React from 'react';
 import moment from 'moment';
 import BudgetTable from '../components/BudgetTable';
-import SelectBar from '../components/SelectBar';
+import SelectBar from './SelectBar';
 import SlideBar from '../components/SlideBar';
 import TimeSpanInfo from '../components/TimeSpanInfo';
 
-class MainTable extends React.Component {
+class MainContainer extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             year: moment().format('YYYY'),
             month: moment().format('MM'),
             day: null
-        };
+        }
 
-        this.stateUpdate = this.stateUpdate.bind(this);
+        this.stateUpdate = this.stateUpdate.bind(this)
     }
 
-    stateUpdate(stateToUpdate, value) {
+    stateUpdate (stateToUpdate, value) {
         this.setState({
             [stateToUpdate]: value
-        });
+        })
     }
 
     render() {
@@ -42,4 +42,4 @@ class MainTable extends React.Component {
     }
 }
 
-export default MainTable;
+export default MainContainer

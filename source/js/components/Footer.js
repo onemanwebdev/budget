@@ -1,13 +1,15 @@
-import React from 'react';
+import React from 'react'
 
 const Footer = () => (
     <footer className="footer">
         <div className="container">
             <div className="row">
-                <span>Footer</span>
+                <div className="col-24-xs">
+                    <span>Footer</span>
+                </div>
             </div>
         </div>
     </footer>
 )
 
-export default Footer;
+export default Footer

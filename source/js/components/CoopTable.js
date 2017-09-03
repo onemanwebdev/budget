@@ -1,5 +1,4 @@
 import React from 'react';
-import firstToUpper from '../services/firstToUpper'
 import * as string from '../constants/strings';
 
 const CoopTable = ({data, displayRows}) => {
@@ -34,4 +33,4 @@ const CoopTable = ({data, displayRows}) => {
     )
 }
 
-export default CoopTable;
+export default CoopTable
