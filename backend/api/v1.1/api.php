@@ -29,7 +29,7 @@
                 "shortName" => "Turkusowa",
                 "zip" => "81-586",
                 "city" => "Gdynia",
-                "address" => "Turkusowa 1"
+                "address" => "ul. Turkusowa 1"
             )
         );
         echo json_encode( $get );

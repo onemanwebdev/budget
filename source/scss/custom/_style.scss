@@ -42,6 +42,15 @@
     }
 }
 
+.menu {
+    @extend .cpa10;
+    text-transform: uppercase;
+}
+
+.submenu {
+    background-color: $gray-40;
+}
+
 .table-row {
     &__add-container {
         padding: 5px;

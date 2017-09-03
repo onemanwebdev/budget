@@ -4,7 +4,7 @@ import Main from './Main';
 import Footer from './Footer';
 
 const App = () => (
-    <div>
+    <div className="container__full">
         <Header />
         <Main />
         <Footer />
