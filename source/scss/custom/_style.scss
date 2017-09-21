@@ -39,6 +39,24 @@
             background-color: $lime-10;
             color: $gray-30;
         }
+
+        &--disabled {
+            background-color: $gray-10;
+            color: $gray-20;
+        }
+    }
+}
+
+.errorRegex {
+    padding: 10px;
+    text-align: center;
+
+    &__text {
+        background-color: $yellow-10;
+        color: $red-90;
+        padding: 5px 20px;
+        margin: 0 auto;
+        width: initial;
     }
 }
 
@@ -70,15 +88,17 @@ table {
 
 thead {
     border-bottom: 2px solid $gray-40;
+
+    tr {
+        background-color: $gray-05;
+        font-weight: 700;
+    }
 }
 
 tbody {
     tr {
         color: $gray-80;
-
-        &:last-child {
-            text-align: center;
-        }
+        text-align: center;
 
         &:not(:last-child) {
             border-bottom: 1px solid $gray-30;

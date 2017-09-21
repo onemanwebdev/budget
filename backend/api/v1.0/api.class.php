@@ -1,6 +1,7 @@
 <?php
     /***
         Version of API: v1.0
+        Current version of API v1.0
     ***/
 
     require_once ( 'core.class.php' );
@@ -29,21 +30,23 @@
         /* Check if requested method is allowed for this endpoint */
         protected function allowedMethod( $endpoint, $method ) {
             switch ( $endpoint ) {
-                case 'base':        return in_array( $method, ['GET', 'POST'] );                   break;
-                case 'cooperators': return in_array( $method, ['GET', 'POST', 'PUT'] );            break;
-                case 'maintable':   return in_array( $method, ['GET', 'POST', 'PUT', 'DELETE'] );  break;
-                case 'payment':     return in_array( $method, ['POST', 'PUT', 'DELETE'] );         break;
-                case 'paytype':     return in_array( $method, ['GET', 'POST', 'PUT'] );            break;
-                case 'template':    return in_array( $method, ['GET', 'POST', 'PUT'] );            break;
+                case 'base':        return in_array( $method, ['GET'] );                    break;
+                case 'cooperators': return in_array( $method, ['GET', 'POST', 'PUT'] );     break;
+                case 'maintable':   return in_array( $method, ['GET'] );                    break;
+                case 'payment':     return in_array( $method, ['POST', 'PUT', 'DELETE'] );  break;
+                case 'template':    return in_array( $method, ['POST'] );                   break;
                 default:            return false;
             }
         }
 
         /* ENDPOINTS */
         protected function cooperators() {
+            print_r( $this->input );
             switch( $this->method ) {
                 case 'GET':
-                    return $this->data->getData( 'getCooperators', $this->request );
+                    return $this->data->getData( 'getCooperators' );
+                case 'POST':
+                    return $this->data->postData( 'postCooperators', json_decode( $this->input ));
             }
         }
     }

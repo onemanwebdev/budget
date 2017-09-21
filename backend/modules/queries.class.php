@@ -1,30 +1,28 @@
 <?php
 class Queries {
+        /* CHECK IF COOPERATOR EXIST */
+        public static function check_exist_coop_query( $compares ) {
+            $query = "SELECT * FROM obj_coop WHERE $compares";
+            echo($query.'<br>');
+            return $query;
+        }
+
         /* NEW COOPERATOR */
-        public static function post_new_coop_query( $values ) {
-            $query = "INSERT INTO obj_coop (oco_name, oco_shortname, oco_zip, oco_city, oco_address)
+        public static function post_new_coop_query( $keys, $values ) {
+            $query = "INSERT INTO obj_coop ($keys)
                       VALUES ($values)";
             return $query;
         }
 
-        /* GET COOPERATOR DATA */
-        public static function get_all_coop_query( $params = null ) {
-            $prefix = "oco_";
+        /* GET ALL COOPERATORS */
+        public static function get_all_coop_query() {
             $query = "SELECT * FROM obj_coop ORDER BY oco_id";
-            if ( is_array( $params ) && count( $params ) != 0 ) {
-                foreach ( $params as $key => $value ) {
-                    isset( $iterator ) ? $iterator++ : $iterator = 1;
-                    isset( $string ) ? $string .= "$prefix" . "$key = $value" : $string = "$prefix" . "$key = $value";
-                    ( $iterator != count( $params )) ? $string .= " AND " : null;
-                }
-                $query .= " WHERE " . $string;
-            }
             return $query;
         }
 
         /* UPDATE COOPERATOR */
-        public static function update_coop_query( $values, $compare ) {
-            $query = "UPDATE obj_coop SET $values WHERE oco_id = $compare";
+        public static function update_coop_query( $values, $id ) {
+            $query = "UPDATE obj_coop SET $values WHERE oco_id = $id";
             return $query;
         }
 

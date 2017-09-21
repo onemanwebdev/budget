@@ -44,7 +44,7 @@
                 case 'DELETE':
                 case 'POST':
                 case 'PUT':
-                    $this->request = $this->cleanInput( $_POST ); break;
+                    $this->request = $this->cleanInput( $_POST );
                     $this->input = file_get_contents( 'php://input' ); break;
                 case 'GET':
                     @$this->request = array_shift( $this->cleanInput( $_GET )); break;
@@ -89,11 +89,14 @@
         private function requestStatus( $code ) {
             $status = array(
                 200 => 'OK',
+                201 => 'Created',
                 404 => 'Not found',
                 405 => 'Method Not Allowed',
+                409 => 'Conflict',
                 500 => 'Internal Server Error'
             );
             return $status[$code] ? $status[$code] : $status[500];
         }
-    }//end of class
+    }
+    //END OF CLASS
 ?>

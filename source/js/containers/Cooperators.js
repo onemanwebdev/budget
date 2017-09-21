@@ -33,12 +33,12 @@ class Cooperators extends React.Component {
             <div>
                 <CoopTable
                     data={this.convertData(this.state.data)}
-                    displayRows={["coopID", "name", "shortName", "zip", "city", "address"]}
+                    displayRows={["coopID", "coopName", "coopShortName", "coopZIP", "coopCity", "coopAddress"]}
                 />
                 <AddRow
                     title={`nowy dostawca`}
                     buttonLabel={`dodaj dostawcę`}
-                    displayRows={["coopID", "name", "shortName", "zip", "city", "address"]}
+                    displayRows={["coopID", "coopName", "coopShortName", "coopZIP", "coopCity", "coopAddress"]}
                 />
             </div>
         )
