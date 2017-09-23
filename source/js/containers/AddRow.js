@@ -17,7 +17,14 @@ class AddRow extends React.Component {
                 coopCity: false,
                 coopAddress: false
             },
-            showError: false
+            showError: false,
+            error: {
+                coopName: "",
+                coopShortName: "",
+                coopZIP: "",
+                coopCity: "",
+                coopAddress: ""
+            },
         }
     }
 
@@ -30,20 +37,30 @@ class AddRow extends React.Component {
                     ...this.state.elementValidation,
                     [name]: true
                 },
-                showError: false
-            })
+                error: {
+                    ...this.state.error,
+                    [name]: false
+                }
+            }, this.checkFormValidation)
         :
-            this.setState({showError: `! ${e.target.placeholder}: ${keyNames[name].regex.errorPL}`})
+            this.setState({
+                elementValidation: {
+                    ...this.state.elementValidation,
+                    [name]: false
+                },
+                error: {
+                    ...this.state.error,
+                    [name]: `${keyNames[name].regex.errorPL}`
+                }
+            }, this.checkFormValidation)
     }
 
     checkFormValidation = () => {
-        console.log('x')
-        let isFormValid = true
-        Object.entries(this.state.elementValidation).map(el => {
-            let value = el[1]
-            if(!value) isFormValid = false
+        let isValid = true
+        Object.values(this.state.elementValidation).map(value => {
+            if(!value) isValid = false
         })
-        this.setState({isFormValid: isFormValid})
+        this.setState({isFormValid: isValid})
     }
 
     setData() {
@@ -58,6 +75,18 @@ class AddRow extends React.Component {
         .catch(err => console.log(err))
     }
 
+    showError = () => {
+        let isError = false;
+        Object.values(this.state.error).map(error => {
+            console.log(Object.values(this.state.error))
+            if(error) {
+                isError = true
+                this.setState({showError: true})
+            }
+        })
+        if(!isError) this.setState({showError: false})
+    }
+
     handleClick = e => {
         e.preventDefault();
         if(e.target.name === "send") this.setData(e.target);
@@ -66,7 +95,14 @@ class AddRow extends React.Component {
         }))
     }
 
+    shouldComponentUpdate(prevState) {
+        if(prevState.error === this.state.error) return false
+        return true
+    }
+
     render() {
+        console.log('Object.values(this.state.error).length',Object.values(this.state.error).length);
+        console.log('this.state.showError',this.state.showError)
         return(
             this.state.isAddButtonClicked ?
                 <div>
@@ -82,7 +118,14 @@ class AddRow extends React.Component {
                                     if(td === 'coopID') return
                                     return(
                                         <td key={index}>
-                                            <input ref={td} type="text" name={td} placeholder={keyNames[td].placeholder} onBlur={this.checkElementValidation} onChange={this.checkFormValidation}/>
+                                            <input
+                                                ref={td}
+                                                type="text"
+                                                name={td}
+                                                placeholder={keyNames[td].placeholder}
+                                                onInput={this.checkElementValidation}
+                                                onBlur={this.showError}
+                                            />
                                         </td>
                                     )
                                 })}
@@ -100,9 +143,17 @@ class AddRow extends React.Component {
                             </tr>
                         </tbody>
                     </table>
-                    {this.state.showError ?
-                        <div className="errorRegex">
-                            <p className="errorRegex__text">{this.state.showError}</p>
+                    {(Object.values(this.state.error).length > 0 && this.state.showError) ?
+                        <div>
+                            {Object.values(this.state.error).map(error => {
+                                if(error !== "") {
+                                    return(
+                                        <div className="errorRegex">
+                                            <p className="errorRegex__text">{error}</p>
+                                        </div>
+                                    )
+                                }
+                            })}
                         </div>
                     :
                         null
