@@ -1,7 +1,7 @@
 const REGEX = {
     companyName: {
         regex: /^[A-ZĆŁŚŹŻ][a-ząćęłńóśźż0-9\._\- ]+((-| )[A-ZĆŁŚŹŻ][a-ząćęłńóśźż0-9\._\- ]+){0,4}( (Sp\. z o\.o\.|S\.A\.|Sp\.J\.|s\.c\.))?$/,
-        errorPL: "Użyj wyłącznie wielkich i małych liter, cyfr oraz znaków: '.', '_', '-', ' '."
+        errorPL: "Użyj wyłącznie wielkich i małych liter, cyfr, spacji oraz znaków: . _ -"
     },
     zipCode: {
         regex: /^\d{2}(-| )?\d{3}$/,

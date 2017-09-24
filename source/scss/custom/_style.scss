@@ -43,6 +43,7 @@
         &--disabled {
             background-color: $gray-10;
             color: $gray-20;
+            cursor: not-allowed;
         }
     }
 }
@@ -53,10 +54,10 @@
 
     &__text {
         background-color: $yellow-10;
-        color: $red-90;
-        padding: 5px 20px;
+        color: $red-70;
+        font-weight: 700;
         margin: 0 auto;
-        width: initial;
+        padding: 5px 20px;
     }
 }
 
@@ -105,7 +106,7 @@ tbody {
             transition: all 0.35s ease;
         }
 
-        &:hover:not(:last-child) {
+        &:hover:not(.clean) {
             background-color: $gray-20;
             color: $white;
         }

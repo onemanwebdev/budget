@@ -39,7 +39,7 @@ class AddRow extends React.Component {
                 },
                 error: {
                     ...this.state.error,
-                    [name]: false
+                    [name]: ""
                 }
             }, this.checkFormValidation)
         :
@@ -95,14 +95,7 @@ class AddRow extends React.Component {
         }))
     }
 
-    shouldComponentUpdate(prevState) {
-        if(prevState.error === this.state.error) return false
-        return true
-    }
-
     render() {
-        console.log('Object.values(this.state.error).length',Object.values(this.state.error).length);
-        console.log('this.state.showError',this.state.showError)
         return(
             this.state.isAddButtonClicked ?
                 <div>
@@ -113,7 +106,7 @@ class AddRow extends React.Component {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="table-row__add-container">
+                            <tr className="table-row__add-container clean">
                                 {this.props.displayRows.map((td, index) => {
                                     if(td === 'coopID') return
                                     return(
@@ -148,7 +141,7 @@ class AddRow extends React.Component {
                             {Object.values(this.state.error).map(error => {
                                 if(error !== "") {
                                     return(
-                                        <div className="errorRegex">
+                                        <div key={Math.random()} className="errorRegex">
                                             <p className="errorRegex__text">{error}</p>
                                         </div>
                                     )
