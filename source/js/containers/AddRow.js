@@ -63,11 +63,11 @@ class AddRow extends React.Component {
         this.setState({isFormValid: isValid})
     }
 
-    setData() {
+    setData = () => {
         api.post('cooperators', {
             coopName: this.refs.coopName.value,
             coopShortName: this.refs.coopShortName.value,
-            coopZIP: this.refs.coopZIP.value,
+            coopZIP: this.parseInput(this.refs.coopZIP.value, 'zipCode'),
             coopCity: this.refs.coopCity.value,
             coopAddress: this.refs.coopAddress.value
         }
@@ -85,6 +85,14 @@ class AddRow extends React.Component {
             }
         })
         if(!isError) this.setState({showError: false})
+    }
+
+    parseInput(data, options = null) {
+        if(options === 'zipCode' && data.length > 5) {
+            data = `${data.slice(0,2)}${data.slice(3,6)}`
+        }
+        data = `${data.slice(0,2)}-${data.slice(2,5)}`
+        return data
     }
 
     handleClick = e => {
@@ -124,7 +132,7 @@ class AddRow extends React.Component {
                                 })}
                                 <td>
                                     {this.state.isFormValid ?
-                                        <button className="button button__submit" name="send" onClick={this.handleClick}>
+                                        <button className="button button__submit" type="submit" name="send" onClick={this.handleClick}>
                                             {this.props.buttonLabel}
                                         </button>
                                     :
