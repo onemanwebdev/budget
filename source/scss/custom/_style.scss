@@ -100,10 +100,10 @@ tbody {
     tr {
         color: $gray-80;
         text-align: center;
+        transition: all 0.3s ease;
 
         &:not(:last-child) {
             border-bottom: 1px solid $gray-30;
-            transition: all 0.35s ease;
         }
 
         &:hover:not(.clean) {

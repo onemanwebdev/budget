@@ -2,12 +2,30 @@
  * Flex-box grid system
  */
 
-.container-row {
+.container {
+    align-content: flex-start;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
-.container-column {
+.row {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+}
+
+/* Flex-grid-system - containers & columns */
+@each $size, $value in $flex-breakpoints {
+    @media all and (min-width: $value) {
+        @if ($size == 'xs') {
+            .container {width: 100%;}
+        } @else {
+            .container {width: $value;}
+        }
+        .col-0-#{$size} {display: none;}
+        @for $i from 1 through $grid-columns {
+            $elem: ($i/$grid-columns) * 100%;
+            .col-#{$i}-#{$size} {width: $elem;}
+        }
+    }
 }
