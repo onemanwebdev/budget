@@ -13,11 +13,9 @@ class MainContainer extends React.Component {
             month: moment().format('MM'),
             day: null
         }
-
-        this.stateUpdate = this.stateUpdate.bind(this)
     }
 
-    stateUpdate (stateToUpdate, value) {
+    stateUpdate = (stateToUpdate, value) => {
         this.setState({
             [stateToUpdate]: value
         })
@@ -25,18 +23,20 @@ class MainContainer extends React.Component {
 
     render() {
         return(
-            <div className="container">
-                <SelectBar
-                    year={this.state.year}
-                    month={this.state.month}
-                    stateUpdate={this.stateUpdate}
-                />
-                <SlideBar />
-                <TimeSpanInfo
-                    year={this.state.year}
-                    month={this.state.month}
-                />
-                <BudgetTable />
+            <div className="row">
+                <div className="col-xs-fixed">
+                    <SelectBar
+                        year={this.state.year}
+                        month={this.state.month}
+                        stateUpdate={this.stateUpdate}
+                    />
+                    <SlideBar />
+                    <TimeSpanInfo
+                        year={this.state.year}
+                        month={this.state.month}
+                    />
+                    <BudgetTable />
+                </div>
             </div>
         );
     }

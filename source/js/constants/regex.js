@@ -13,7 +13,7 @@ const REGEX = {
     },
     address: {
         regex: /^(ul\.|al\.|pl\.|os\.) [A-ZĆŁŚŹŻ][a-ząćęłńóśźż]+((-| )[A-ZĆŁŚŹŻ][a-ząćęłńóśźż]+){0,2}( \d{1,4}(\/\d{1,4})?){1}$/,
-        errorPL: "Użyj skrótu przed nazwą ulicy/alei/placu/osiedla oraz wielkich i małych liter w nazwie."
+        errorPL: "Użyj skrótu przed nazwą ulicy/alei/placu/osiedla oraz wielkich i małych liter w nazwie i nr budynku."
     }
 }
 

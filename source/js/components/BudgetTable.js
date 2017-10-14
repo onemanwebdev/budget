@@ -5,8 +5,8 @@ import * as string from '../constants/strings';
 const BudgetTable = () => {
     return(
         <div className="row">
-            <div className="col-24-xs">
-                <table className="mainTable">
+            <div className="col-xs-24">
+                <table>
                     <thead>
                         <tr>
                             <th>{string.DESC}</th>

@@ -29,19 +29,19 @@ class Cooperators extends React.Component {
     }
 
     render() {
-        return(
-            <div>
-                <CoopTable
-                    data={this.convertData(this.state.data)}
-                    displayRows={["coopID", "coopName", "coopShortName", "coopZIP", "coopCity", "coopAddress"]}
-                />
-                <AddRow
-                    title={`nowy dostawca`}
-                    buttonLabel={`dodaj dostawcę`}
-                    displayRows={["coopID", "coopName", "coopShortName", "coopZIP", "coopCity", "coopAddress"]}
-                />
-            </div>
-        )
+        return[
+            <CoopTable
+                key="1"
+                data={this.convertData(this.state.data)}
+                displayRows={["coopID", "coopName", "coopShortName", "coopZIP", "coopCity", "coopAddress"]}
+            />,
+            <AddRow
+                key="2"
+                title={`nowy dostawca`}
+                buttonLabel={`dodaj dostawcę`}
+                displayRows={["coopID", "coopName", "coopShortName", "coopZIP", "coopCity", "coopAddress"]}
+            />
+        ]
     }
 }
 

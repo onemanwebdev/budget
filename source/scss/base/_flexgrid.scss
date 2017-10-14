@@ -2,30 +2,46 @@
  * Flex-box grid system
  */
 
-.container {
-    align-content: flex-start;
+// Placeholders for CSS classes
+%container {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+%row {
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
+    align-items: stretch;
+}
+
+// Main SCSS classes
+.container {
+    @extend %container;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 .row {
-    display: flex;
-    flex-flow: row wrap;
+    @extend %row;
 }
 
-/* Flex-grid-system - containers & columns */
-@each $size, $value in $flex-breakpoints {
-    @media all and (min-width: $value) {
-        @if ($size == 'xs') {
-            .container {width: 100%;}
-        } @else {
-            .container {width: $value;}
+[class^="col-"] {
+    @extend %container;
+}
+
+@each $breakpoint, $width in $flex-breakpoints {
+    @media all and (min-width: $width) {
+        .col-#{$breakpoint}-fixed {
+            flex-basis: map-get($flex-breakpoints, 'xl');
         }
-        .col-0-#{$size} {display: none;}
-        @for $i from 1 through $grid-columns {
-            $elem: ($i/$grid-columns) * 100%;
-            .col-#{$i}-#{$size} {width: $elem;}
+        .col-#{$breakpoint}-0 {display: none;}
+        @for $flex from 1 through $flex-columns {
+            .col-#{$breakpoint}-#{$flex} {
+                flex-grow: $flex;
+            }
         }
     }
 }

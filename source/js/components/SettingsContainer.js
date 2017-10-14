@@ -5,31 +5,25 @@ import Cooperators from '../containers/Cooperators'
 import Base from './Base'
 
 const SettingsContainer = ({match}) => {
-    return(
-        <div>
-            <div className="submenu">
-                <div className="container menu">
-                    <div className="row">
-                        <div className="col-24-xs">
-                            <ul>
-                                <li className=""><Link to={`${match.url}/Cooperators`}>{string.COOPERATORS}</Link></li>
-                                <li className=""><Link to={`${match.url}/Base`}>{string.BASE}</Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    return[
+        <div key="1" className="row">
+            <div className="col-xs-fixed">
+                <nav>
+                    <ul>
+                        <li className="text-content"><Link to={`${match.url}/Cooperators`}>{string.COOPERATORS}</Link></li>
+                        <li className="text-content"><Link to={`${match.url}/Base`}>{string.BASE}</Link></li>
+                    </ul>
+                </nav>
             </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-24-xs">
-                        <Route exact path={`${match.url}`} component={Cooperators} />
-                        <Route path={`${match.url}/Cooperators`} component={Cooperators} />
-                        <Route path={`${match.url}/Base`} component={Base} />
-                    </div>
-                </div>
+        </div>,
+        <div key="2" className="row">
+            <div className="col-xs-fixed">
+                <Route exact path={`${match.url}`} component={Cooperators} />
+                <Route path={`${match.url}/Cooperators`} component={Cooperators} />
+                <Route path={`${match.url}/Base`} component={Base} />
             </div>
         </div>
-    )
+    ]
 }
 
 export default SettingsContainer
