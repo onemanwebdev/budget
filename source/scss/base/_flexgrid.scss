@@ -45,3 +45,16 @@
         }
     }
 }
+
+.table {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    flex-basis: 100%;
+
+
+    &__container {
+        @extend %container;
+        overflow: auto;
+    }
+}
