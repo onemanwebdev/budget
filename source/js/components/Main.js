@@ -4,9 +4,11 @@ import MainContainer from '../containers/MainContainer';
 import SettingsContainer from '../components/SettingsContainer';
 
 const Main = () => (
-    <main className="main">
-        <Route exact path="/" component={MainContainer} />
-        <Route path="/setup" component={SettingsContainer} />
+    <main className="row">
+        <div className="col-xs-24">
+            <Route exact path="/" component={MainContainer} />
+            <Route path="/setup" component={SettingsContainer} />
+        </div>
     </main>
 )
 

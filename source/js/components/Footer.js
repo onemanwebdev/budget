@@ -1,13 +1,9 @@
 import React from 'react'
 
 const Footer = () => (
-    <footer className="footer">
-        <div className="container">
-            <div className="row">
-                <div className="col-24-xs">
-                    <span>Footer</span>
-                </div>
-            </div>
+    <footer className="row">
+        <div className="col-xs-fixed">
+            <span className="text-content">Footer</span>
         </div>
     </footer>
 )

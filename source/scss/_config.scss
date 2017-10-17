@@ -26,6 +26,10 @@ $font-xl:   2 * $font-base;
 $grid-columns: 24;
 $grid-breakpoints: (xs: 0, sm: 480px, md: 660px, lg: 1000px, xl: 1340px);
 
+/* Flex Config */
+$flex-columns: 24;
+$flex-breakpoints: (xs: 0, sm: 320px, md: 660px, lg: 960px, xl: 1400px);
+
 /* Config for Padding, Margin, Border System */
 $offset-type: (padding: 'p', margin: 'm', border: 'b');
 $offset-dir: (top: 't', right: 'r', bottom: 'b', left: 'l');

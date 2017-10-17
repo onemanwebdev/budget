@@ -12,7 +12,7 @@
 // (reset - base - grid - [offset] - )
 @import 'base/reset';
 @import 'base/base';
-@import 'base/grid';
+@import 'base/flexgrid'; //instead of 'base/grid'
 @import 'base/offsets';
 
 // Main custom style (from './custom')

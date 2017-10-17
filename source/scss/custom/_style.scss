@@ -1,6 +1,11 @@
 /*
  * File to create Your own style sheet
  */
+
+.text-content {
+    padding: 5px;
+}
+
 .button {
     @extend .cpy10;
     @extend .cpx20;
@@ -100,10 +105,10 @@ tbody {
     tr {
         color: $gray-80;
         text-align: center;
+        transition: all 0.3s ease;
 
         &:not(:last-child) {
             border-bottom: 1px solid $gray-30;
-            transition: all 0.35s ease;
         }
 
         &:hover:not(.clean) {
@@ -125,18 +130,11 @@ th {
 ul, li {
     display: inline-block;
 }
-
-.header {
-    background-color: $gray-50;
-    font-weight: 700;
+header {
+//    flex: initial;
 }
-
-.footer {
-    @extend .cpa10;
-    background-color: $gray-90;
-    color: $gray-10;
-    font-weight: 700;
-    text-align: center;
+footer {
+//    flex: initial;
 }
 
 .TESTsubmenu {
@@ -150,4 +148,8 @@ ul, li {
 
 .TESTsubmenu > ul > li:hover {
     color: $white;
+}
+
+main {
+    flex: 1;
 }
