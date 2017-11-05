@@ -58,21 +58,12 @@
     text-align: center;
 
     &__text {
-        background-color: $yellow-10;
-        color: $red-70;
+        background-color: $hsv50-50;
+        color: $hsv360-70;
         font-weight: 700;
         margin: 0 auto;
         padding: 5px 20px;
     }
-}
-
-.menu {
-    @extend .cpa10;
-    text-transform: uppercase;
-}
-
-.submenu {
-    background-color: $gray-40;
 }
 
 .table-row {
@@ -88,15 +79,10 @@
     }
 }
 
-table {
-    width: 100%;
-}
-
 thead {
     border-bottom: 2px solid $gray-40;
 
     tr {
-        background-color: $gray-05;
         font-weight: 700;
     }
 }
@@ -107,10 +93,6 @@ tbody {
         text-align: center;
         transition: all 0.3s ease;
 
-        &:not(:last-child) {
-            border-bottom: 1px solid $gray-30;
-        }
-
         &:hover:not(.clean) {
             background-color: $gray-20;
             color: $white;
@@ -118,36 +100,9 @@ tbody {
     }
 }
 
-
+//temp values
 td, th {
-    @extend .cpa10;
-}
-
-th {
-    text-transform: capitalize; //do usunięcia
-}
-
-ul, li {
-    display: inline-block;
-}
-header {
-//    flex: initial;
-}
-footer {
-//    flex: initial;
-}
-
-.TESTsubmenu {
-    @extend .cpa10;
-    background-color: $gray-30;
-    color: $gray-80;
-    font-weight: 700;
-    text-transform: capitalize;
-    transition: all 0.5s ease;
-}
-
-.TESTsubmenu > ul > li:hover {
-    color: $white;
+    padding: 5px;
 }
 
 main {

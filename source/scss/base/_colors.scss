@@ -4,119 +4,879 @@
 /*
  * Inside this file are precofigurated colors
  * Gray-scale with 11 shades and 17 colors with 5 shades each
+ *
+ * Palette set with Google color picker in HSV({color}, 95%, 95%),
+ * then set light and dark in http://www.0to255.com/ on -12,-9,-6,-3,+3,+6,+9,+12,+14
  */
-
+//hsv(0°, 0%, 50%)
 $black:          #000000;
-$gray-90:        #1a1a1a;
-$gray-80:        #333333;
-$gray-70:        #4d4d4d;
-$gray-60:        #666666;
-$gray-50:        #808080;
-$gray-40:        #999999;
-$gray-30:        #b3b3b3;
-$gray-20:        #cccccc;
-$gray-10:        #e6e6e6;
-$gray-05:        #f3f3f3;
+$gray-05:        #111111;
+$light-green-50:        #191919; //do usuniecia
+$light-green-70:        #191919; //do usuniecia
+$light-blue-70:         #191919; //do usuniecia
+$light-green-10:        #191919; //do usuniecia
+$lime-50:               #191919; //do usuniecia
+$lime-70:               #191919; //do usuniecia
+$lime-10:               #191919; //do usuniecia
+$gray-10:        #191919;
+$gray-20:        #333333;
+$gray-30:        #4c4c4c;
+$gray-40:        #666666;
+$gray-50:        #7f7f7f;
+$gray-60:        #989898;
+$gray-70:        #b2b2b2;
+$gray-80:        #cbcbcb;
+$gray-90:        #e5e5e5;
+$gray-95:        #f6f6f6;
 $white:          #ffffff;
 
-$red-90:         #b71c1c;
-$red-70:         #d32f2f;
-$red-50:         #f44336;
-$red-30:         #e57373;
-$red-10:         #ffcdd2;
+//hsv(360°, 95%, 95%), hsv(0°, 95%, 95%)
+$hsv360-10:            #300202;
+$hsv360-20:            #600505;
+$hsv360-30:            #910707;
+$hsv360-40:            #c10a0a;
+$hsv360-50:            #f20c0c;
+$hsv360-60:            #f53c3c;
+$hsv360-70:            #f86c6c;
+$hsv360-80:            #fa9d9d;
+$hsv360-90:            #fdcdcd;
+$hsv360-95:            #feeeee;
 
-$pink-90:        #880e4f;
-$pink-70:        #c2185b;
-$pink-50:        #e91e63;
-$pink-50:        #f06292;
-$pink-50:        #f8bbd0;
+//hsv(350°, 95%, 95%)
+$hsv350-10:            #30020a;
+$hsv350-20:            #600514;
+$hsv350-30:            #91071e;
+$hsv350-40:            #c10a28;
+$hsv350-50:            #f20c32;
+$hsv350-60:            #f53c5a;
+$hsv350-70:            #f86c83;
+$hsv350-80:            #fa9dac;
+$hsv350-90:            #fdcdd5;
+$hsv350-95:            #feeef0;
 
-$purple-90:      #4a148c;
-$purple-70:      #7b1fa2;
-$purple-50:      #9c27b0;
-$purple-30:      #ba68c8;
-$purple-10:      #e1bee7;
+//hsv(340°, 95%, 95%)
+$hsv340-10:            #300211;
+$hsv340-20:            #600523;
+$hsv340-30:            #910735;
+$hsv340-40:            #c10a46;
+$hsv340-50:            #f20c58;
+$hsv340-60:            #f53c79;
+$hsv340-70:            #f86c9a;
+$hsv340-80:            #fa9dbc;
+$hsv340-90:            #fdcddd;
+$hsv340-95:            #feeef3;
 
-$deep-purple-90: #311b92;
-$deep-purple-70: #512da8;
-$deep-purple-50: #673ab7;
-$deep-purple-30: #9575cd;
-$deep-purple-10: #d1c4e9;
+//hsv(330°, 95%, 95%)
+$hsv330-10: #300219;
+$hsv330-20: #600533;
+$hsv330-30: #91074c;
+$hsv330-40: #c10a66;
+$hsv330-50: #f20c7f;
+$hsv330-60: #f53c98;
+$hsv330-70: #f86cb2;
+$hsv330-80: #fa9dcb;
+$hsv330-90: #fdcde5;
+$hsv330-95: #feeef6;
 
-$indigo-90:      #1a237e;
-$indigo-70:      #303f9f;
-$indigo-50:      #3f51b5;
-$indigo-30:      #7986cb;
-$indigo-10:      #c5cae9;
+//hsv(320°, 95%, 95%)
+$hsv320-10: #300221;
+$hsv320-20: #600542;
+$hsv320-30: #910763;
+$hsv320-40: #c10a84;
+$hsv320-50: #f20ca5;
+$hsv320-60: #f53cb7;
+$hsv320-70: #f86cc9;
+$hsv320-80: #fa9ddb;
+$hsv320-90: #fdcded;
+$hsv320-95: #feeef9;
 
-$blue-90:        #0d47a1;
-$blue-70:        #1976d2;
-$blue-50:        #2196f3;
-$blue-30:        #64b5f6;
-$blue-10:        #bbdefb;
+//hsv(310°, 95%, 95%)
+$hsv310-10:    #300228;
+$hsv310-20:    #600551;
+$hsv310-30:    #91077a;
+$hsv310-40:    #c10aa2;
+$hsv310-50:    #f20ccb;
+$hsv310-60:    #f53cd6;
+$hsv310-70:    #f86ce0;
+$hsv310-80:    #fa9dea;
+$hsv310-90:    #fdcdf5;
+$hsv310-95:    #feeefb;
 
-$light-blue-90:  #01579b;
-$light-blue-70:  #0288d1;
-$light-blue-50:  #03a9f4;
-$light-blue-30:  #4fc3f7;
-$light-blue-10:  #b3e5fc;
+//hsv(300°, 95%, 95%)
+$hsv300-10:    #300230;
+$hsv300-20:    #600560;
+$hsv300-30:    #910791;
+$hsv300-40:    #c10ac1;
+$hsv300-50:    #f20cf2;
+$hsv300-60:    #f53cf5;
+$hsv300-70:    #f86cf8;
+$hsv300-80:    #fa9dfa;
+$hsv300-90:    #fdcdfd;
+$hsv300-95:    #feeefe;
 
-$cyan-90:        #006064;
-$cyan-70:        #0097a7;
-$cyan-50:        #00bcd4;
-$cyan-30:        #4dd0e1;
-$cyan-10:        #b2ebf2;
+//hsv(290°, 95%, 95%)
+$hsv290-10:    #280230;
+$hsv290-20:    #510560;
+$hsv290-30:    #7a0791;
+$hsv290-40:    #a20ac1;
+$hsv290-50:    #cb0cf2;
+$hsv290-60:    #d63cf5;
+$hsv290-70:    #e06cf8;
+$hsv290-80:    #ea9dfa;
+$hsv290-90:    #f5cdfd;
+$hsv290-95:    #fbeefe;
 
-$teal-90:        #004d40;
-$teal-70:        #00796b;
-$teal-50:        #009688;
-$teal-30:        #4db6ac;
-$teal-10:        #b2dfdb;
+//hsv(280°, 95%, 95%)
+$hsv280-10:    #210230;
+$hsv280-20:    #420560;
+$hsv280-30:    #630791;
+$hsv280-40:    #840ac1;
+$hsv280-50:    #a50cf2;
+$hsv280-60:    #b73cf5;
+$hsv280-70:    #c96cf8;
+$hsv280-80:    #db9dfa;
+$hsv280-90:    #edcdfd;
+$hsv280-95:    #f9eefe;
 
-$green-90:       #1b5e20;
-$green-70:       #388e3c;
-$green-50:       #4caf50;
-$green-30:       #81c784;
-$green-10:       #c8e6c9;
+//hsv(270°, 95%, 95%)
+$hsv270-10:    #190230;
+$hsv270-20:    #330560;
+$hsv270-30:    #4c0791;
+$hsv270-40:    #660ac1;
+$hsv270-50:    #7f0cf2;
+$hsv270-60:    #983cf5;
+$hsv270-70:    #b26cf8;
+$hsv270-80:    #cb9dfa;
+$hsv270-90:    #e5cdfd;
+$hsv270-95:    #f6eefe;
 
-$light-green-90: #33691e;
-$light-green-70: #689f38;
-$light-green-50: #8bc34a;
-$light-green-30: #aed581;
-$light-green-10: #dcedc8;
+//hsv(260°, 95%, 95%)
+$hsv260-10:    #110230;
+$hsv260-20:    #230560;
+$hsv260-30:    #350791;
+$hsv260-40:    #460ac1;
+$hsv260-50:    #580cf2;
+$hsv260-60:    #793cf5;
+$hsv260-70:    #9a6cf8;
+$hsv260-80:    #bc9dfa;
+$hsv260-90:    #ddcdfd;
+$hsv260-95:    #f3eefe;
 
-$lime-90:        #827717;
-$lime-70:        #afb42b;
-$lime-50:        #cddc39;
-$lime-30:        #dce775;
-$lime-10:        #f0f4c3;
+//hsv(250°, 95%, 95%)
+$hsv250-10:    #0a0230;
+$hsv250-20:    #140560;
+$hsv250-30:    #1e0791;
+$hsv250-40:    #280ac1;
+$hsv250-50:    #320cf2;
+$hsv250-60:    #5a3cf5;
+$hsv250-70:    #836cf8;
+$hsv250-80:    #ac9dfa;
+$hsv250-90:    #d5cdfd;
+$hsv250-95:    #f0eefe;
 
-$yellow-90:      #f57f17;
-$yellow-70:      #fbc02d;
-$yellow-50:      #ffeb3b;
-$yellow-30:      #fff176;
-$yellow-10:      #fff9c4;
+//hsv(240°, 95%, 95%)
+$hsv240-10:    #020230;
+$hsv240-20:    #050560;
+$hsv240-30:    #070791;
+$hsv240-40:    #0a0ac1;
+$hsv240-50:    #0c0cf2;
+$hsv240-60:    #3c3cf5;
+$hsv240-70:    #6c6cf8;
+$hsv240-80:    #9d9dfa;
+$hsv240-90:    #cdcdfd;
+$hsv240-95:    #eeeefe;
 
-$amber-90:       #ff6f00;
-$amber-70:       #ffa000;
-$amber-50:       #ffc107;
-$amber-30:       #ffd54f;
-$amber-10:       #ffecb3;
+//hsv(230°, 95%, 95%)
+$hsv230-10:    #020a30;
+$hsv230-20:    #051460;
+$hsv230-30:    #071e91;
+$hsv230-40:    #0a28c1;
+$hsv230-50:    #0c32f2;
+$hsv230-60:    #3c5af5;
+$hsv230-70:    #6c83f8;
+$hsv230-80:    #9dacfa;
+$hsv230-90:    #cdd5fd;
+$hsv230-95:    #eef0fe;
 
-$orange-90:      #e65100;
-$orange-70:      #f57c00;
-$orange-50:      #ff9800;
-$orange-30:      #ffb74d;
-$orange-10:      #ffe0b2;
+//hsv(220°, 95%, 95%)
+$hsv220-10:    #021130;
+$hsv220-20:    #052360;
+$hsv220-30:    #073591;
+$hsv220-40:    #0a46c1;
+$hsv220-50:    #0c58f2;
+$hsv220-60:    #3c79f5;
+$hsv220-70:    #6c9af8;
+$hsv220-80:    #9dbcfa;
+$hsv220-90:    #cdddfd;
+$hsv220-95:    #eef3fe;
 
-$deep-orange-90: #bf360c;
-$deep-orange-70: #e64a19;
-$deep-orange-50: #ff5722;
-$deep-orange-30: #ff8a65;
-$deep-orange-10: #ffccbc;
+//hsv(210°, 95%, 95%)
+$hsv210-10:    #021930;
+$hsv210-20:    #053360;
+$hsv210-30:    #074c91;
+$hsv210-40:    #0a66c1;
+$hsv210-50:    #0c7ff2;
+$hsv210-60:    #3c98f5;
+$hsv210-70:    #6cb2f8;
+$hsv210-80:    #9dcbfa;
+$hsv210-90:    #cde5fd;
+$hsv210-95:    #eef6fe;
 
-$brown-90:       #3e2723;
-$brown-70:       #5d4037;
-$brown-50:       #795548;
-$brown-30:       #a1887f;
-$brown-10:       #d7ccc8;
+//hsv(200°, 95%, 95%)
+$hsv200-10:    #022130;
+$hsv200-20:    #054260;
+$hsv200-30:    #076391;
+$hsv200-40:    #0a84c1;
+$hsv200-50:    #0ca5f2;
+$hsv200-60:    #3cb7f5;
+$hsv200-70:    #6cc9f8;
+$hsv200-80:    #9ddbfa;
+$hsv200-90:    #cdedfd;
+$hsv200-95:    #eef9fe;
+
+//hsv(190°, 95%, 95%)
+$hsv190-10:    #022830;
+$hsv190-20:    #055160;
+$hsv190-30:    #077a91;
+$hsv190-40:    #0aa2c1;
+$hsv190-50:    #0ccbf2;
+$hsv190-60:    #3cd6f5;
+$hsv190-70:    #6ce0f8;
+$hsv190-80:    #9deafa;
+$hsv190-90:    #cdf5fd;
+$hsv190-95:    #eefbfe;
+
+//hsv(180°, 95%, 95%)
+$hsv180-10:    #023030;
+$hsv180-20:    #056060;
+$hsv180-30:    #079191;
+$hsv180-40:    #0ac1c1;
+$hsv180-50:    #0cf2f2;
+$hsv180-60:    #3cf5f5;
+$hsv180-70:    #6cf8f8;
+$hsv180-80:    #9dfafa;
+$hsv180-90:    #cdfdfd;
+$hsv180-95:    #eefefe;
+
+//hsv(170°, 95%, 95%)
+$hsv170-10:    #023028;
+$hsv170-20:    #056051;
+$hsv170-30:    #07917a;
+$hsv170-40:    #0ac1a2;
+$hsv170-50:    #0cf2cb;
+$hsv170-60:    #3cf5d6;
+$hsv170-70:    #6cf8e0;
+$hsv170-80:    #9dfaea;
+$hsv170-90:    #cdfdf5;
+$hsv170-95:    #eefefb;
+
+//hsv(160°, 95%, 95%)
+$hsv160-10:    #023021;
+$hsv160-20:    #056042;
+$hsv160-30:    #079163;
+$hsv160-40:    #0ac184;
+$hsv160-50:    #0cf2a5;
+$hsv160-60:    #3cf5b7;
+$hsv160-70:    #6cf8c9;
+$hsv160-80:    #9dfadb;
+$hsv160-90:    #cdfded;
+$hsv160-95:    #eefef9;
+
+//hsv(150°, 95%, 95%)
+$hsv150-10:    #023019;
+$hsv150-20:    #056033;
+$hsv150-30:    #07914c;
+$hsv150-40:    #0ac166;
+$hsv150-50:    #0cf27f;
+$hsv150-60:    #3cf598;
+$hsv150-70:    #6cf8b2;
+$hsv150-80:    #9dfacb;
+$hsv150-90:    #cdfde5;
+$hsv150-95:    #eefef6;
+
+//hsv(140°, 95%, 95%)
+$hsv140-10:    #023011;
+$hsv140-20:    #056023;
+$hsv140-30:    #079135;
+$hsv140-40:    #0ac146;
+$hsv140-50:    #0cf258;
+$hsv140-60:    #3cf579;
+$hsv140-70:    #6cf89a;
+$hsv140-80:    #9dfabc;
+$hsv140-90:    #cdfddd;
+$hsv140-95:    #eefef3;
+
+//hsv(130°, 95%, 95%)
+$hsv130-10:    #02300a;
+$hsv130-20:    #056014;
+$hsv130-30:    #07911e;
+$hsv130-40:    #0ac128;
+$hsv130-50:    #0cf232;
+$hsv130-60:    #3cf55a;
+$hsv130-70:    #6cf883;
+$hsv130-80:    #9dfaac;
+$hsv130-90:    #cdfdd5;
+$hsv130-95:    #eefef0;
+
+//hsv(120°, 95%, 95%)
+$hsv120-10:    #023002;
+$hsv120-20:    #056005;
+$hsv120-30:    #079107;
+$hsv120-40:    #0ac10a;
+$hsv120-50:    #0cf20c;
+$hsv120-60:    #3cf53c;
+$hsv120-70:    #6cf86c;
+$hsv120-80:    #9dfa9d;
+$hsv120-90:    #cdfdcd;
+$hsv120-95:    #eefeee;
+
+//hsv(110°, 95%, 95%)
+$hsv110-10:    #0a3002;
+$hsv110-20:    #146005;
+$hsv110-30:    #1e9107;
+$hsv110-40:    #28c10a;
+$hsv110-50:    #32f20c;
+$hsv110-60:    #5af53c;
+$hsv110-70:    #83f86c;
+$hsv110-80:    #acfa9d;
+$hsv110-90:    #d5fdcd;
+$hsv110-95:    #f0feee;
+
+//hsv(100°, 95%, 95%)
+$hsv100-10:    #113002;
+$hsv100-20:    #236005;
+$hsv100-30:    #359107;
+$hsv100-40:    #46c10a;
+$hsv100-50:    #58f20c;
+$hsv100-60:    #79f53c;
+$hsv100-70:    #9af86c;
+$hsv100-80:    #bcfa9d;
+$hsv100-90:    #ddfdcd;
+$hsv100-95:    #f3feee;
+
+//hsv(90°, 95%, 95%)
+$hsv90-10:    #193002;
+$hsv90-20:    #336005;
+$hsv90-30:    #4c9107;
+$hsv90-40:    #66c10a;
+$hsv90-50:    #7ff20c;
+$hsv90-60:    #98f53c;
+$hsv90-70:    #b2f86c;
+$hsv90-80:    #cbfa9d;
+$hsv90-90:    #e5fdcd;
+$hsv90-95:    #f6feee;
+
+//hsv(80°, 95%, 95%)
+$hsv80-10:    #213002;
+$hsv80-20:    #426005;
+$hsv80-30:    #639107;
+$hsv80-40:    #84c10a;
+$hsv80-50:    #a5f20c;
+$hsv80-60:    #b7f53c;
+$hsv80-70:    #c9f86c;
+$hsv80-80:    #dbfa9d;
+$hsv80-90:    #edfdcd;
+$hsv80-95:    #f9feee;
+
+//hsv(70°, 95%, 95%)
+$hsv70-10:    #283002;
+$hsv70-20:    #516005;
+$hsv70-30:    #7a9107;
+$hsv70-40:    #a2c10a;
+$hsv70-50:    #cbf20c;
+$hsv70-60:    #d6f53c;
+$hsv70-70:    #e0f86c;
+$hsv70-80:    #eafa9d;
+$hsv70-90:    #f5fdcd;
+$hsv70-95:    #fbfeee;
+
+//hsv(60°, 95%, 95%)
+$hsv60-10: #303002;
+$hsv60-20: #606005;
+$hsv60-30: #919107;
+$hsv60-40: #c1c10a;
+$hsv60-50: #f2f20c;
+$hsv60-60: #f5f53c;
+$hsv60-70: #f8f86c;
+$hsv60-80: #fafa9d;
+$hsv60-90: #fdfdcd;
+$hsv60-95: #fefeee;
+
+//hsv(50°, 95%, 95%)
+$hsv50-10: #302802;
+$hsv50-20: #605105;
+$hsv50-30: #917a07;
+$hsv50-40: #c1a20a;
+$hsv50-50: #f2cb0c;
+$hsv50-60: #f5d63c;
+$hsv50-70: #f8e06c;
+$hsv50-80: #faea9d;
+$hsv50-90: #fdf5cd;
+$hsv50-95: #fefbee;
+
+//hsv(40°, 95%, 95%)
+$hsv40-10: #302102;
+$hsv40-20: #604205;
+$hsv40-30: #916307;
+$hsv40-40: #c1840a;
+$hsv40-50: #f2a50c;
+$hsv40-60: #f5b73c;
+$hsv40-70: #f8c96c;
+$hsv40-80: #fadb9d;
+$hsv40-90: #fdedcd;
+$hsv40-95: #fef9ee;
+
+//hsv(30°, 95%, 95%)
+$hsv30-10: #301902;
+$hsv30-20: #603305;
+$hsv30-30: #914c07;
+$hsv30-40: #c1660a;
+$hsv30-50: #f27f0c;
+$hsv30-60: #f5983c;
+$hsv30-70: #f8b26c;
+$hsv30-80: #facb9d;
+$hsv30-90: #fde5cd;
+$hsv30-95: #fef6ee;
+
+//hsv(20°, 95%, 95%)
+$hsv20-10: #301102;
+$hsv20-20: #602305;
+$hsv20-30: #913507;
+$hsv20-40: #c1460a;
+$hsv20-50: #f2580c;
+$hsv20-60: #f5793c;
+$hsv20-70: #f89a6c;
+$hsv20-80: #fabc9d;
+$hsv20-90: #fdddcd;
+$hsv20-95: #fef3ee;
+
+//hsv(10°, 95%, 95%)
+$hsv10-10: #300a02;
+$hsv10-20: #601405;
+$hsv10-30: #911e07;
+$hsv10-40: #c1280a;
+$hsv10-50: #f2320c;
+$hsv10-60: #f55a3c;
+$hsv10-70: #f8836c;
+$hsv10-80: #faac9d;
+$hsv10-90: #fdd5cd;
+$hsv10-95: #fef0ee;
+
+td, th {
+    vertical-align: middle !important;
+    padding: 1px !important;
+}
+
+
+.hsv360-10 {background-color: $hsv360-10;}
+.hsv360-20 {background-color: $hsv360-20;}
+.hsv360-30 {background-color: $hsv360-30;}
+.hsv360-40 {background-color: $hsv360-40;}
+.hsv360-50 {background-color: $hsv360-50;}
+.hsv360-60 {background-color: $hsv360-60;}
+.hsv360-70 {background-color: $hsv360-70;}
+.hsv360-80 {background-color: $hsv360-80;}
+.hsv360-90 {background-color: $hsv360-90;}
+.hsv360-95 {background-color: $hsv360-95;}
+
+.hsv350-10 {background-color: $hsv350-10;}
+.hsv350-20 {background-color: $hsv350-20;}
+.hsv350-30 {background-color: $hsv350-30;}
+.hsv350-40 {background-color: $hsv350-40;}
+.hsv350-50 {background-color: $hsv350-50;}
+.hsv350-60 {background-color: $hsv350-60;}
+.hsv350-70 {background-color: $hsv350-70;}
+.hsv350-80 {background-color: $hsv350-80;}
+.hsv350-90 {background-color: $hsv350-90;}
+.hsv350-95 {background-color: $hsv350-95;}
+
+.hsv340-10 {background-color: $hsv340-10;}
+.hsv340-20 {background-color: $hsv340-20;}
+.hsv340-30 {background-color: $hsv340-30;}
+.hsv340-40 {background-color: $hsv340-40;}
+.hsv340-50 {background-color: $hsv340-50;}
+.hsv340-60 {background-color: $hsv340-60;}
+.hsv340-70 {background-color: $hsv340-70;}
+.hsv340-80 {background-color: $hsv340-80;}
+.hsv340-90 {background-color: $hsv340-90;}
+.hsv340-95 {background-color: $hsv340-95;}
+
+.hsv330-10 {background-color: $hsv330-10;}
+.hsv330-20 {background-color: $hsv330-20;}
+.hsv330-30 {background-color: $hsv330-30;}
+.hsv330-40 {background-color: $hsv330-40;}
+.hsv330-50 {background-color: $hsv330-50;}
+.hsv330-60 {background-color: $hsv330-60;}
+.hsv330-70 {background-color: $hsv330-70;}
+.hsv330-80 {background-color: $hsv330-80;}
+.hsv330-90 {background-color: $hsv330-90;}
+.hsv330-95 {background-color: $hsv330-95;}
+
+.hsv320-10 {background-color: $hsv320-10;}
+.hsv320-20 {background-color: $hsv320-20;}
+.hsv320-30 {background-color: $hsv320-30;}
+.hsv320-40 {background-color: $hsv320-40;}
+.hsv320-50 {background-color: $hsv320-50;}
+.hsv320-60 {background-color: $hsv320-60;}
+.hsv320-70 {background-color: $hsv320-70;}
+.hsv320-80 {background-color: $hsv320-80;}
+.hsv320-90 {background-color: $hsv320-90;}
+.hsv320-95 {background-color: $hsv320-95;}
+
+.hsv310-10 {background-color: $hsv310-10;}
+.hsv310-20 {background-color: $hsv310-20;}
+.hsv310-30 {background-color: $hsv310-30;}
+.hsv310-40 {background-color: $hsv310-40;}
+.hsv310-50 {background-color: $hsv310-50;}
+.hsv310-60 {background-color: $hsv310-60;}
+.hsv310-70 {background-color: $hsv310-70;}
+.hsv310-80 {background-color: $hsv310-80;}
+.hsv310-90 {background-color: $hsv310-90;}
+.hsv310-95 {background-color: $hsv310-95;}
+
+.hsv300-10 {background-color: $hsv300-10;}
+.hsv300-20 {background-color: $hsv300-20;}
+.hsv300-30 {background-color: $hsv300-30;}
+.hsv300-40 {background-color: $hsv300-40;}
+.hsv300-50 {background-color: $hsv300-50;}
+.hsv300-60 {background-color: $hsv300-60;}
+.hsv300-70 {background-color: $hsv300-70;}
+.hsv300-80 {background-color: $hsv300-80;}
+.hsv300-90 {background-color: $hsv300-90;}
+.hsv300-95 {background-color: $hsv300-95;}
+
+.hsv290-10 {background-color: $hsv290-10;}
+.hsv290-20 {background-color: $hsv290-20;}
+.hsv290-30 {background-color: $hsv290-30;}
+.hsv290-40 {background-color: $hsv290-40;}
+.hsv290-50 {background-color: $hsv290-50;}
+.hsv290-60 {background-color: $hsv290-60;}
+.hsv290-70 {background-color: $hsv290-70;}
+.hsv290-80 {background-color: $hsv290-80;}
+.hsv290-90 {background-color: $hsv290-90;}
+.hsv290-95 {background-color: $hsv290-95;}
+
+.hsv280-10 {background-color: $hsv280-10;}
+.hsv280-20 {background-color: $hsv280-20;}
+.hsv280-30 {background-color: $hsv280-30;}
+.hsv280-40 {background-color: $hsv280-40;}
+.hsv280-50 {background-color: $hsv280-50;}
+.hsv280-60 {background-color: $hsv280-60;}
+.hsv280-70 {background-color: $hsv280-70;}
+.hsv280-80 {background-color: $hsv280-80;}
+.hsv280-90 {background-color: $hsv280-90;}
+.hsv280-95 {background-color: $hsv280-95;}
+
+.hsv270-10 {background-color: $hsv270-10;}
+.hsv270-20 {background-color: $hsv270-20;}
+.hsv270-30 {background-color: $hsv270-30;}
+.hsv270-40 {background-color: $hsv270-40;}
+.hsv270-50 {background-color: $hsv270-50;}
+.hsv270-60 {background-color: $hsv270-60;}
+.hsv270-70 {background-color: $hsv270-70;}
+.hsv270-80 {background-color: $hsv270-80;}
+.hsv270-90 {background-color: $hsv270-90;}
+.hsv270-95 {background-color: $hsv270-95;}
+
+.hsv260-10 {background-color: $hsv260-10;}
+.hsv260-20 {background-color: $hsv260-20;}
+.hsv260-30 {background-color: $hsv260-30;}
+.hsv260-40 {background-color: $hsv260-40;}
+.hsv260-50 {background-color: $hsv260-50;}
+.hsv260-60 {background-color: $hsv260-60;}
+.hsv260-70 {background-color: $hsv260-70;}
+.hsv260-80 {background-color: $hsv260-80;}
+.hsv260-90 {background-color: $hsv260-90;}
+.hsv260-95 {background-color: $hsv260-95;}
+
+.hsv250-10 {background-color: $hsv250-10;}
+.hsv250-20 {background-color: $hsv250-20;}
+.hsv250-30 {background-color: $hsv250-30;}
+.hsv250-40 {background-color: $hsv250-40;}
+.hsv250-50 {background-color: $hsv250-50;}
+.hsv250-60 {background-color: $hsv250-60;}
+.hsv250-70 {background-color: $hsv250-70;}
+.hsv250-80 {background-color: $hsv250-80;}
+.hsv250-90 {background-color: $hsv250-90;}
+.hsv250-95 {background-color: $hsv250-95;}
+
+.hsv240-10 {background-color: $hsv240-10;}
+.hsv240-20 {background-color: $hsv240-20;}
+.hsv240-30 {background-color: $hsv240-30;}
+.hsv240-40 {background-color: $hsv240-40;}
+.hsv240-50 {background-color: $hsv240-50;}
+.hsv240-60 {background-color: $hsv240-60;}
+.hsv240-70 {background-color: $hsv240-70;}
+.hsv240-80 {background-color: $hsv240-80;}
+.hsv240-90 {background-color: $hsv240-90;}
+.hsv240-95 {background-color: $hsv240-95;}
+
+.hsv230-10 {background-color: $hsv230-10;}
+.hsv230-20 {background-color: $hsv230-20;}
+.hsv230-30 {background-color: $hsv230-30;}
+.hsv230-40 {background-color: $hsv230-40;}
+.hsv230-50 {background-color: $hsv230-50;}
+.hsv230-60 {background-color: $hsv230-60;}
+.hsv230-70 {background-color: $hsv230-70;}
+.hsv230-80 {background-color: $hsv230-80;}
+.hsv230-90 {background-color: $hsv230-90;}
+.hsv230-95 {background-color: $hsv230-95;}
+
+.hsv220-10 {background-color: $hsv220-10;}
+.hsv220-20 {background-color: $hsv220-20;}
+.hsv220-30 {background-color: $hsv220-30;}
+.hsv220-40 {background-color: $hsv220-40;}
+.hsv220-50 {background-color: $hsv220-50;}
+.hsv220-60 {background-color: $hsv220-60;}
+.hsv220-70 {background-color: $hsv220-70;}
+.hsv220-80 {background-color: $hsv220-80;}
+.hsv220-90 {background-color: $hsv220-90;}
+.hsv220-95 {background-color: $hsv220-95;}
+
+.hsv210-10 {background-color: $hsv210-10;}
+.hsv210-20 {background-color: $hsv210-20;}
+.hsv210-30 {background-color: $hsv210-30;}
+.hsv210-40 {background-color: $hsv210-40;}
+.hsv210-50 {background-color: $hsv210-50;}
+.hsv210-60 {background-color: $hsv210-60;}
+.hsv210-70 {background-color: $hsv210-70;}
+.hsv210-80 {background-color: $hsv210-80;}
+.hsv210-90 {background-color: $hsv210-90;}
+.hsv210-95 {background-color: $hsv210-95;}
+
+.hsv200-10 {background-color: $hsv200-10;}
+.hsv200-20 {background-color: $hsv200-20;}
+.hsv200-30 {background-color: $hsv200-30;}
+.hsv200-40 {background-color: $hsv200-40;}
+.hsv200-50 {background-color: $hsv200-50;}
+.hsv200-60 {background-color: $hsv200-60;}
+.hsv200-70 {background-color: $hsv200-70;}
+.hsv200-80 {background-color: $hsv200-80;}
+.hsv200-90 {background-color: $hsv200-90;}
+.hsv200-95 {background-color: $hsv200-95;}
+
+.hsv190-10 {background-color: $hsv190-10;}
+.hsv190-20 {background-color: $hsv190-20;}
+.hsv190-30 {background-color: $hsv190-30;}
+.hsv190-40 {background-color: $hsv190-40;}
+.hsv190-50 {background-color: $hsv190-50;}
+.hsv190-60 {background-color: $hsv190-60;}
+.hsv190-70 {background-color: $hsv190-70;}
+.hsv190-80 {background-color: $hsv190-80;}
+.hsv190-90 {background-color: $hsv190-90;}
+.hsv190-95 {background-color: $hsv190-95;}
+
+.hsv180-10 {background-color: $hsv180-10;}
+.hsv180-20 {background-color: $hsv180-20;}
+.hsv180-30 {background-color: $hsv180-30;}
+.hsv180-40 {background-color: $hsv180-40;}
+.hsv180-50 {background-color: $hsv180-50;}
+.hsv180-60 {background-color: $hsv180-60;}
+.hsv180-70 {background-color: $hsv180-70;}
+.hsv180-80 {background-color: $hsv180-80;}
+.hsv180-90 {background-color: $hsv180-90;}
+.hsv180-95 {background-color: $hsv180-95;}
+
+.hsv170-10 {background-color: $hsv170-10;}
+.hsv170-20 {background-color: $hsv170-20;}
+.hsv170-30 {background-color: $hsv170-30;}
+.hsv170-40 {background-color: $hsv170-40;}
+.hsv170-50 {background-color: $hsv170-50;}
+.hsv170-60 {background-color: $hsv170-60;}
+.hsv170-70 {background-color: $hsv170-70;}
+.hsv170-80 {background-color: $hsv170-80;}
+.hsv170-90 {background-color: $hsv170-90;}
+.hsv170-95 {background-color: $hsv170-95;}
+
+.hsv160-10 {background-color: $hsv160-10;}
+.hsv160-20 {background-color: $hsv160-20;}
+.hsv160-30 {background-color: $hsv160-30;}
+.hsv160-40 {background-color: $hsv160-40;}
+.hsv160-50 {background-color: $hsv160-50;}
+.hsv160-60 {background-color: $hsv160-60;}
+.hsv160-70 {background-color: $hsv160-70;}
+.hsv160-80 {background-color: $hsv160-80;}
+.hsv160-90 {background-color: $hsv160-90;}
+.hsv160-95 {background-color: $hsv160-95;}
+
+.hsv150-10 {background-color: $hsv150-10;}
+.hsv150-20 {background-color: $hsv150-20;}
+.hsv150-30 {background-color: $hsv150-30;}
+.hsv150-40 {background-color: $hsv150-40;}
+.hsv150-50 {background-color: $hsv150-50;}
+.hsv150-60 {background-color: $hsv150-60;}
+.hsv150-70 {background-color: $hsv150-70;}
+.hsv150-80 {background-color: $hsv150-80;}
+.hsv150-90 {background-color: $hsv150-90;}
+.hsv150-95 {background-color: $hsv150-95;}
+
+.hsv140-10 {background-color: $hsv140-10;}
+.hsv140-20 {background-color: $hsv140-20;}
+.hsv140-30 {background-color: $hsv140-30;}
+.hsv140-40 {background-color: $hsv140-40;}
+.hsv140-50 {background-color: $hsv140-50;}
+.hsv140-60 {background-color: $hsv140-60;}
+.hsv140-70 {background-color: $hsv140-70;}
+.hsv140-80 {background-color: $hsv140-80;}
+.hsv140-90 {background-color: $hsv140-90;}
+.hsv140-95 {background-color: $hsv140-95;}
+
+.hsv130-10 {background-color: $hsv130-10;}
+.hsv130-20 {background-color: $hsv130-20;}
+.hsv130-30 {background-color: $hsv130-30;}
+.hsv130-40 {background-color: $hsv130-40;}
+.hsv130-50 {background-color: $hsv130-50;}
+.hsv130-60 {background-color: $hsv130-60;}
+.hsv130-70 {background-color: $hsv130-70;}
+.hsv130-80 {background-color: $hsv130-80;}
+.hsv130-90 {background-color: $hsv130-90;}
+.hsv130-95 {background-color: $hsv130-95;}
+
+.hsv120-10 {background-color: $hsv120-10;}
+.hsv120-20 {background-color: $hsv120-20;}
+.hsv120-30 {background-color: $hsv120-30;}
+.hsv120-40 {background-color: $hsv120-40;}
+.hsv120-50 {background-color: $hsv120-50;}
+.hsv120-60 {background-color: $hsv120-60;}
+.hsv120-70 {background-color: $hsv120-70;}
+.hsv120-80 {background-color: $hsv120-80;}
+.hsv120-90 {background-color: $hsv120-90;}
+.hsv120-95 {background-color: $hsv120-95;}
+
+.hsv110-10 {background-color: $hsv110-10;}
+.hsv110-20 {background-color: $hsv110-20;}
+.hsv110-30 {background-color: $hsv110-30;}
+.hsv110-40 {background-color: $hsv110-40;}
+.hsv110-50 {background-color: $hsv110-50;}
+.hsv110-60 {background-color: $hsv110-60;}
+.hsv110-70 {background-color: $hsv110-70;}
+.hsv110-80 {background-color: $hsv110-80;}
+.hsv110-90 {background-color: $hsv110-90;}
+.hsv110-95 {background-color: $hsv110-95;}
+
+.hsv100-10 {background-color: $hsv100-10;}
+.hsv100-20 {background-color: $hsv100-20;}
+.hsv100-30 {background-color: $hsv100-30;}
+.hsv100-40 {background-color: $hsv100-40;}
+.hsv100-50 {background-color: $hsv100-50;}
+.hsv100-60 {background-color: $hsv100-60;}
+.hsv100-70 {background-color: $hsv100-70;}
+.hsv100-80 {background-color: $hsv100-80;}
+.hsv100-90 {background-color: $hsv100-90;}
+.hsv100-95 {background-color: $hsv100-95;}
+
+.hsv90-10 {background-color: $hsv90-10;}
+.hsv90-20 {background-color: $hsv90-20;}
+.hsv90-30 {background-color: $hsv90-30;}
+.hsv90-40 {background-color: $hsv90-40;}
+.hsv90-50 {background-color: $hsv90-50;}
+.hsv90-60 {background-color: $hsv90-60;}
+.hsv90-70 {background-color: $hsv90-70;}
+.hsv90-80 {background-color: $hsv90-80;}
+.hsv90-90 {background-color: $hsv90-90;}
+.hsv90-95 {background-color: $hsv90-95;}
+
+.hsv80-10 {background-color: $hsv80-10;}
+.hsv80-20 {background-color: $hsv80-20;}
+.hsv80-30 {background-color: $hsv80-30;}
+.hsv80-40 {background-color: $hsv80-40;}
+.hsv80-50 {background-color: $hsv80-50;}
+.hsv80-60 {background-color: $hsv80-60;}
+.hsv80-70 {background-color: $hsv80-70;}
+.hsv80-80 {background-color: $hsv80-80;}
+.hsv80-90 {background-color: $hsv80-90;}
+.hsv80-95 {background-color: $hsv80-95;}
+
+.hsv70-10 {background-color: $hsv70-10;}
+.hsv70-20 {background-color: $hsv70-20;}
+.hsv70-30 {background-color: $hsv70-30;}
+.hsv70-40 {background-color: $hsv70-40;}
+.hsv70-50 {background-color: $hsv70-50;}
+.hsv70-60 {background-color: $hsv70-60;}
+.hsv70-70 {background-color: $hsv70-70;}
+.hsv70-80 {background-color: $hsv70-80;}
+.hsv70-90 {background-color: $hsv70-90;}
+.hsv70-95 {background-color: $hsv70-95;}
+
+.hsv60-10 {background-color: $hsv60-10;}
+.hsv60-20 {background-color: $hsv60-20;}
+.hsv60-30 {background-color: $hsv60-30;}
+.hsv60-40 {background-color: $hsv60-40;}
+.hsv60-50 {background-color: $hsv60-50;}
+.hsv60-60 {background-color: $hsv60-60;}
+.hsv60-70 {background-color: $hsv60-70;}
+.hsv60-80 {background-color: $hsv60-80;}
+.hsv60-90 {background-color: $hsv60-90;}
+.hsv60-95 {background-color: $hsv60-95;}
+
+.hsv50-10 {background-color: $hsv50-10;}
+.hsv50-20 {background-color: $hsv50-20;}
+.hsv50-30 {background-color: $hsv50-30;}
+.hsv50-40 {background-color: $hsv50-40;}
+.hsv50-50 {background-color: $hsv50-50;}
+.hsv50-60 {background-color: $hsv50-60;}
+.hsv50-70 {background-color: $hsv50-70;}
+.hsv50-80 {background-color: $hsv50-80;}
+.hsv50-90 {background-color: $hsv50-90;}
+.hsv50-95 {background-color: $hsv50-95;}
+
+.hsv40-10 {background-color: $hsv40-10;}
+.hsv40-20 {background-color: $hsv40-20;}
+.hsv40-30 {background-color: $hsv40-30;}
+.hsv40-40 {background-color: $hsv40-40;}
+.hsv40-50 {background-color: $hsv40-50;}
+.hsv40-60 {background-color: $hsv40-60;}
+.hsv40-70 {background-color: $hsv40-70;}
+.hsv40-80 {background-color: $hsv40-80;}
+.hsv40-90 {background-color: $hsv40-90;}
+.hsv40-95 {background-color: $hsv40-95;}
+
+.hsv30-10 {background-color: $hsv30-10;}
+.hsv30-20 {background-color: $hsv30-20;}
+.hsv30-30 {background-color: $hsv30-30;}
+.hsv30-40 {background-color: $hsv30-40;}
+.hsv30-50 {background-color: $hsv30-50;}
+.hsv30-60 {background-color: $hsv30-60;}
+.hsv30-70 {background-color: $hsv30-70;}
+.hsv30-80 {background-color: $hsv30-80;}
+.hsv30-90 {background-color: $hsv30-90;}
+.hsv30-95 {background-color: $hsv30-95;}
+
+.hsv20-10 {background-color: $hsv20-10;}
+.hsv20-20 {background-color: $hsv20-20;}
+.hsv20-30 {background-color: $hsv20-30;}
+.hsv20-40 {background-color: $hsv20-40;}
+.hsv20-50 {background-color: $hsv20-50;}
+.hsv20-60 {background-color: $hsv20-60;}
+.hsv20-70 {background-color: $hsv20-70;}
+.hsv20-80 {background-color: $hsv20-80;}
+.hsv20-90 {background-color: $hsv20-90;}
+.hsv20-95 {background-color: $hsv20-95;}
+
+.hsv10-10 {background-color: $hsv10-10;}
+.hsv10-20 {background-color: $hsv10-20;}
+.hsv10-30 {background-color: $hsv10-30;}
+.hsv10-40 {background-color: $hsv10-40;}
+.hsv10-50 {background-color: $hsv10-50;}
+.hsv10-60 {background-color: $hsv10-60;}
+.hsv10-70 {background-color: $hsv10-70;}
+.hsv10-80 {background-color: $hsv10-80;}
+.hsv10-90 {background-color: $hsv10-90;}
+.hsv10-95 {background-color: $hsv10-95;}
+
+.choose {
+    background-color: $gray-95;
+    display:table-cell;
+    color: $gray-10;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.hide {
+    display: none;
+}
+
+.color-container {
+    height: 40px;
+    width:  40px;
+}

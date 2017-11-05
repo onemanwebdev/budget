@@ -108,43 +108,45 @@ class AddRow extends React.Component {
             <div className="row">
                 <div className="col-xs-24">
                     {this.state.isAddButtonClicked ?
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colSpan="99">{this.props.title}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr className="table-row__add-container clean">
-                                    {this.props.displayRows.map((td, index) => {
-                                        if(td === 'coopID') return
-                                        return(
-                                            <td key={index}>
-                                                <input
-                                                    ref={td}
-                                                    type="text"
-                                                    name={td}
-                                                    placeholder={keyNames[td].placeholder}
-                                                    onInput={this.checkElementValidation}
-                                                    onBlur={this.showError}
-                                                />
-                                            </td>
-                                        )
-                                    })}
-                                    <td>
-                                        {this.state.isFormValid ?
-                                            <button className="button button__submit" type="submit" name="send" onClick={this.handleClick}>
-                                                {this.props.buttonLabel}
-                                            </button>
-                                        :
-                                            <button className="button button__submit--disabled">
-                                                {this.props.buttonLabel}
-                                            </button>
-                                        }
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div className="table__container">
+                            <table className="table">
+                                <thead>
+                                    <tr>
+                                        <th colSpan="99">{this.props.title}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="table-row__add-container clean">
+                                        {this.props.displayRows.map((td, index) => {
+                                            if(td === 'coopID') return
+                                            return(
+                                                <td key={index}>
+                                                    <input
+                                                        ref={td}
+                                                        type="text"
+                                                        name={td}
+                                                        placeholder={keyNames[td].placeholder}
+                                                        onInput={this.checkElementValidation}
+                                                        onBlur={this.showError}
+                                                    />
+                                                </td>
+                                            )
+                                        })}
+                                        <td>
+                                            {this.state.isFormValid ?
+                                                <button className="button button__submit" type="submit" name="send" onClick={this.handleClick}>
+                                                    {this.props.buttonLabel}
+                                                </button>
+                                            :
+                                                <button className="button button__submit--disabled">
+                                                    {this.props.buttonLabel}
+                                                </button>
+                                            }
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     :
                         <div>
                             <button className="button button__add" onClick={this.handleClick}>Dodaj</button>

@@ -9,6 +9,7 @@ const Header = () => (
                 <ul>
                     <li className="text-content"><Link to="/">{string.BUDGET}</Link></li>
                     <li className="text-content"><Link to="/setup">{string.SETUP}</Link></li>
+                    <li className="text-content"><Link to="/color">Kolory</Link></li>
                 </ul>
             </nav>
         </div>
